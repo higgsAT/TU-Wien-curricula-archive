@@ -3,6 +3,7 @@
 #include <curl/curl.h>
 #include <fstream>
 #include <vector>
+#include <cstring>
 
 // datastream (fetched source files) used by fetch_source_single_page
 size_t write_fetched_data(void* ptr, size_t size, size_t nmemb, void* data)
@@ -52,18 +53,21 @@ size_t write_file_data(void* ptr, size_t size, size_t nmemb, FILE* stream)
 
 
 // download a PDF given by an URL
-void fetch_PDF_from_URL(std::string fetch_pdf_url)
+void fetch_PDF_from_URL(std::string fetch_pdf_url, std::string filename, std::string temp_files_location)
 {
 	CURL* curl;
 	FILE* fp;
 	CURLcode res;
 
-	char outfilename[FILENAME_MAX] = "test.pdf";
+	// define locations where to save the file temporarily
+	std::string outfilename = temp_files_location+filename;
+	const char *cfilename = outfilename.c_str();
+
 	curl = curl_easy_init();
 
 	if (curl)
 	{
-		fp = fopen(outfilename, "wb");
+		fp = fopen(cfilename, "wb");
 		curl_easy_setopt(curl, CURLOPT_URL, fetch_pdf_url.c_str());
 		curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_file_data);
 		curl_easy_setopt(curl, CURLOPT_WRITEDATA, fp);
@@ -150,32 +154,43 @@ void extract_PDF_URL_and_descriptions(std::string result, std::vector<std::strin
 }
 
 
+// cut the std::string / extract the filename which is the last part of the std::string
+std::string filename_extraction(std::string process_string, std::string delimiter)
+{
+	size_t pos = 0;
+	std::string token;
+
+	while ((pos = process_string.find(delimiter)) != std::string::npos)
+	{
+		token = process_string.substr(0, pos);
+		process_string.erase(0, pos + delimiter.length());	// remove the parts of the string left of the delimiter
+	}
+
+	return process_string;	// return the last part of the std::string (the filename)
+}
+
 int main()
 {
 
+	std::string temp_files_location = "../temp_downloads/";	// location where the temp downloaded files are stored
 
 
-std::string result = "<p>UE 066 443 <a href=\"/fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Architektur_2020.pdf\" target=\"_blank\">Architektur<span class=\"sr-only\">, öffnet eine Datei in einem neuen Fenster</span></a></p><p>UE 066 444 <a href=\"/fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Masterstudium_Building_Science_and_Technology.pdf\" target=\"_blank\">Building Science &amp; Technologie<span class=\"sr-only\">, öffnet eine Datei in einem neuen Fenster</span></a> englischsprachig</p><h3>Bauingenieurwesen</h3><p>UE 066 505 <a href=\"/fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Bauingenieurwissenschaften_2020.pdf\" target=\"_blank\">Bauingenieurwissenschaften <span class=\"sr-only\">, öffnet eine Datei in einem neuen Fenster</span></a></p><h3>Biomedical Engineering (interfakultär)</h3><p>UE 066 453 <a href=\"/fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Biomedical_Engineering_2020.pdf\" target=\"_blank\">Biomedical Engineering<span class=\"sr-only\">, öffnet eine Datei in einem neuen Fenster</span></a> (englischsprachig)</p><h3>Computational Science and Engineering (interfakultär)</h3><p>UE 066 646 <a href=\"/fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Computational_Science_and_Engineering_2020.pdf\" target=\"_blank\">Computational Science and Engineering<span class=\"sr-only\">, öffnet eine Datei in einem neuen Fenster</span></a></p><h3>Elektrotechnik</h3><p>UE 066 504 <a href=\"/fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Embedded_Systems_2020.pdf\" target=\"_blank\">Embedded Systems<span class=\"sr-only\">, öffnet eine Datei in einem neuen Fenster</span></a></p><p>UE 066 506 <a href=\"/fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2018/MasterEnergieundAutomatisierungstechnik.pdf\" target=\"_blank\">Energie- und Automatiesierungstechnik<span class=\"sr-only\">, öffnet eine Datei in einem neuen Fenster</span></a></p><p>UE 066 507 <a href=\"/fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2019/Masterstudium_Telecommunications.pdf\" target=\"_blank\">Telecommunications <span class=\"sr-only\">, öffnet eine Datei in einem neuen Fenster</span></a>englischsprachig</p><p>UE 066 508 ";
-
-
-
-
-
-
-
-
-
-
-
-	// 1. fetch the source code of the page
+/*
+	//////////////////////////////////////////
+	// 1. fetch the source code of the page //
+	//////////////////////////////////////////
 
 	// the site one wants to crawl
-//	std::string page_to_crawl = "https://www.tuwien.at/tu-wien/organisation/zentrale-bereiche/studienabteilung/studienplaene";
+	std::string TLD				= "https://www.tuwien.at";	// top-level-domain
+	std::string page_to_crawl	= "/tu-wien/organisation/zentrale-bereiche/studienabteilung/studienplaene";
+
 
 	// fetch the source code of the given page
-//	std::string result = fetch_source_single_page(page_to_crawl);
+	std::string result = fetch_source_single_page(TLD+page_to_crawl);
 
-	// 2. parse the obtained source code (extract PDF links, descriptions, etc.)
+	///////////////////////////////////////////////////////////////////////////////
+	// 2. parse the obtained source code (extract PDF links, descriptions, etc.) //
+	///////////////////////////////////////////////////////////////////////////////
 
 	// define the structure in which the found data will be stored (two vectors of type std::String)
 	std::vector<std::string> extract_PDF_urls;	// URLs pointing to the PDFs to be downloaded
@@ -198,28 +213,57 @@ std::string result = "<p>UE 066 443 <a href=\"/fileadmin/Assets/dienstleister/st
 		// the elements by which the curricula are sorted by
 		std::vector<std::string> search_str {"BSc", "MSc", "Doktor", "Erweiterungsstudium", "Gemeinsame_Studienprogramme", "Alte_Studienplaene"};
 
+		bool found_element = false;
+
 		// determine which curricula is which (of type)
 		for (int j = 0; j < search_str.size(); j++)
 		{
 			if (extract_PDF_urls[i].find(search_str[j]) != std::string::npos)
 			{
 				extract_url_info.push_back(j);
+				found_element = true;
 				break;
 			}
 		}
+
+		// no element of interest
+		if (found_element == false)
+		{
+			extract_url_info.push_back(-1);
+		}
 	}
 
-	// 3. download (all) the PDFs temporarily
+	////////////////////////////////////////////
+	// 3. download (all) the PDFs temporarily //
+	////////////////////////////////////////////
 
+	for (int i = 0; i < extract_PDF_urls.size(); i++)
+	{
+		// only parse desired links (ones of type PDF which were included in the search_str vector)
+		if (extract_url_info[i] > -1)
+		{
+			// cout the PDF URLs
+			std::cout << "URL: (" << extract_url_info[i] << "): " << extract_PDF_urls[i] << std::endl;
 
-	// 4. compare PDFs (new one?, new version?, changed version? -> hash the file -> save file if it is a new one)
+			// TODO: check whether the file already exists in this (temp) folder!
 
+			// download a single PDF given by an URL
+			fetch_PDF_from_URL(TLD+extract_PDF_urls[i]);
 
-	// 5. create a log of the crawl
+		}
+	}
+*/
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// 4. compare PDFs (new one?, new version?, changed version? -> hash the file -> save file if it is a new one) //
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+	std::string teststring = "http://phys.ik.cx/physics/aufgabensammlung523.pdf";
+	std::string extracted_file_name = filename_extraction(teststring, "/");
+ 	fetch_PDF_from_URL("http://phys.ik.cx/physics/aufgabensammlung523.pdf", extracted_file_name, temp_files_location);
 
-	// download a single PDF given by an URL
-//	fetch_PDF_from_URL("http://phys.ik.cx/physics/aufgabensammlung523.pdf");
+	//////////////////////////////////
+	// 5. create a log of the crawl //
+	//////////////////////////////////
 
 	return 0;
 }
