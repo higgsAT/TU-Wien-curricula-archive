@@ -1,6 +1,6 @@
 ############################################################
 CXX = g++
-CXXFLAGS = -g -Wall -Wextra -pedantic -lcurl -lboost_filesystem -lboost_system -std=c++11
+CXXFLAGS = -g -Wall -Wextra -pedantic -lcurl -lboost_filesystem -lboost_system -std=c++17
 EXC = build
 OBJ = obj
 ############################################################

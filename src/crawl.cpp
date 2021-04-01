@@ -5,7 +5,7 @@
 #include <vector>
 #include <cstring>
 #include <boost/filesystem.hpp>
-
+#include <filesystem>
 #include <boost/crc.hpp>
 #include <istream>
 
@@ -14,7 +14,7 @@ size_t write_fetched_data(void* ptr, size_t size, size_t nmemb, void* data)
 {
 	std::string* result = static_cast<std::string*>(data);
 	*result += std::string((char*)ptr, size* nmemb);
-	return size*nmemb;
+	return size* nmemb;
 }
 
 // fetch the source code of a single page
@@ -215,8 +215,15 @@ uint32_t crc32(std::string file_read_open)
 
 int main()
 {
+	// file paths
+	std::string temp_files_location = "temp_downloads/";	// location where the temp downloaded files are stored
+	std::string curricula_files_location = "curricula/";	// location where the downloaded curricula are stored
 
-/*
+	// defome the names of the folders where the curricula are stored to (corresponds to the numbering elements in the search_str std::vector)
+	std::vector<std::string> folder_name_structure {"Bachelor", "Master", "Doktor", "Erweiterungsstudium", "Gemeinsame Studienprogramme", "Alte Studienpläne"};
+//	std::vector<std::string> search_str {"BSc", "MSc", "Doktor", "Erweiterungsstudium", "Gemeinsame_Studienprogramme", "Alte_Studienplaene"};
+
+
 	//////////////////////////////////////////
 	// 1. fetch the source code of the page //
 	//////////////////////////////////////////
@@ -236,7 +243,7 @@ int main()
 	// define the structure in which the found data will be stored (two vectors of type std::String)
 	std::vector<std::string> extract_PDF_urls;	// URLs pointing to the PDFs to be downloaded
 	std::vector<std::string> extract_url_descr;	// description of the PDF according to the '<a href =' - element
-	std::vector<int> extract_url_info;	// information about this curricula (from the two above given data entries)
+	std::vector<int> extract_url_info;			// information about this curricula (from the two above given data entries)
 
 	// extract the data
 	extract_PDF_URL_and_descriptions(result, extract_PDF_urls, extract_url_descr);
@@ -291,40 +298,69 @@ int main()
 			std::string extracted_file_name = filename_extraction(extract_PDF_urls[i], "/");
 
 			// download a single PDF given by an URL
-			fetch_PDF_from_URL(TLD+extract_PDF_urls[i], extracted_file_name, temp_files_location);
+	//		fetch_PDF_from_URL(TLD+extract_PDF_urls[i], extracted_file_name, temp_files_location);
 		}
 	}
-*/
+
+
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// 4. compare PDFs (new one?, new version?, changed version? -> hash the file -> save file if it is a new one) //
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	// go through each (temporarily) downloaded file: see if the file is already present in the downloaded folder or not
 
-
-/*
+	// loop through all found files
 	for (int i = 0; i < extract_PDF_urls.size(); i++)
 	{
+		if (extract_url_info[i] > -1)
+		{
+			// URL description clean-up ('amp;')
+			std::string erase_search = "amp;";
+			std::string::size_type search_pos = extract_url_descr[i].find(erase_search);	// search the position of this string
+
+			if (search_pos != std::string::npos)	// if a position has been found it will be removed
+			{
+				extract_url_descr[i].erase(search_pos, erase_search.length());
+			}
+
+
+
+
+			std::cout << extract_url_info[i] << " | " << extract_PDF_urls[i] << " | " << extract_url_descr[i] << std::endl;
+		}
 	}
+
+/*
+1 | /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Software_Engineering_And_Internet_Computing_2020.pdf | Software Engineering &amp; Internet Computing
+1 | /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Technische_Informatik_2020.pdf | Technische Informatik
+1 | /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Maschinenbau_2020.pdf | Maschinenbau
 */
 
+/*
 
-
-	std::string temp_files_location = "temp_downloads/";	// location where the temp downloaded files are stored
-	std::string curricula_files_location = "curricula/";	// location where the downloaded curricula are stored
 
 	std::string file_read_open = "temp_downloads/test.dat";
 	uint32_t crc32_checksum = crc32(file_read_open);
 	std::cout << "crc32 checksum: " << crc32_checksum << std::endl;
 
+
+	std::cout << std::endl;
+
+	std::string path = temp_files_location;
+	for (const auto & entry : std::filesystem::directory_iterator(path))
+	{
+		std::cout << entry.path().filename() << std::endl;
+	}
+
+	std::cout << std::endl;
+
 	exit(1);
-
-
 
 	if (!boost::filesystem::exists(curricula_files_location))	// folder does not exist
 	{
 		std::cout << "folder does not exist" << std::endl;
 	}
+*/
 
 	//////////////////////////////////
 	// 5. create a log of the crawl //
