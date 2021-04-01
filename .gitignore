@@ -1,3 +1,6 @@
 # exclude executables
 *.out
-*.exe
+
+# exclude the folders with the compiled files (object files and executables)
+obj/
+build/
