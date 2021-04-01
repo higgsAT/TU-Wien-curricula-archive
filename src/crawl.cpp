@@ -6,6 +6,9 @@
 #include <cstring>
 #include <boost/filesystem.hpp>
 
+#include <boost/crc.hpp>
+#include <istream>
+
 // datastream (fetched source files) used by fetch_source_single_page
 size_t write_fetched_data(void* ptr, size_t size, size_t nmemb, void* data)
 {
@@ -170,11 +173,48 @@ std::string filename_extraction(std::string process_string, std::string delimite
 	return process_string;	// return the last part of the std::string (the filename)
 }
 
+// courtesy: Toby Speight (https://codereview.stackexchange.com/questions/133483/calculate-the-crc32-of-the-contents-of-a-file-using-boost)
+// calculates the crc32 checksum for a given file
+uint32_t crc32(std::string file_read_open)
+{
+	char buf[4096];
+	boost::crc_32_type result;
+
+	std::filebuf fb;
+
+	if (fb.open (file_read_open, std::ios::in))
+	{
+		std::istream is(&fb);
+
+		// calculate the crc32 checksum
+		do
+		{
+			is.read(buf, sizeof buf);
+			result.process_bytes(buf, is.gcount());
+		}
+		while (is);
+
+		if (is.eof())
+		{
+			return result.checksum();
+		}
+		else
+		{
+			throw std::runtime_error("File read failed");
+			return 0;
+		}
+
+		fb.close();
+	}
+	else
+	{
+		std::cout << "File read failed" << std::endl;
+		return 0;
+	}
+}
+
 int main()
 {
-
-	std::string temp_files_location = "../temp_downloads/";	// location where the temp downloaded files are stored
-
 
 /*
 	//////////////////////////////////////////
@@ -259,16 +299,31 @@ int main()
 	// 4. compare PDFs (new one?, new version?, changed version? -> hash the file -> save file if it is a new one) //
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+	// go through each (temporarily) downloaded file: see if the file is already present in the downloaded folder or not
 
-	std::string temp_files_location2 = "../temp_downloads/aa/zz/";	// location where the temp downloaded files are stored
 
-	std::string teststring = "http://phys.ik.cx/physics/aufgabensammlung523.pdf";
-	std::string extracted_file_name = filename_extraction(teststring, "/");
-// 	fetch_PDF_from_URL("http://phys.ik.cx/physics/aufgabensammlung523.pdf", extracted_file_name, temp_files_location2);
-
-	if (!boost::filesystem::exists(temp_files_location2))
+/*
+	for (int i = 0; i < extract_PDF_urls.size(); i++)
 	{
-		std::cout << "blabla" << std::endl;
+	}
+*/
+
+
+
+	std::string temp_files_location = "temp_downloads/";	// location where the temp downloaded files are stored
+	std::string curricula_files_location = "curricula/";	// location where the downloaded curricula are stored
+
+	std::string file_read_open = "temp_downloads/test.dat";
+	uint32_t crc32_checksum = crc32(file_read_open);
+	std::cout << "crc32 checksum: " << crc32_checksum << std::endl;
+
+	exit(1);
+
+
+
+	if (!boost::filesystem::exists(curricula_files_location))	// folder does not exist
+	{
+		std::cout << "folder does not exist" << std::endl;
 	}
 
 	//////////////////////////////////
