@@ -247,9 +247,10 @@ int main()
 
 			// TODO: check whether the file already exists in this (temp) folder!
 
-			// download a single PDF given by an URL
-			fetch_PDF_from_URL(TLD+extract_PDF_urls[i]);
+			std::string extracted_file_name = filename_extraction(extract_PDF_urls[i], "/");
 
+			// download a single PDF given by an URL
+			fetch_PDF_from_URL(TLD+extract_PDF_urls[i], extracted_file_name, temp_files_location);
 		}
 	}
 */
