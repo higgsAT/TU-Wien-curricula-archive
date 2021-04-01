@@ -4,6 +4,7 @@
 #include <fstream>
 #include <vector>
 #include <cstring>
+#include <boost/filesystem.hpp>
 
 // datastream (fetched source files) used by fetch_source_single_page
 size_t write_fetched_data(void* ptr, size_t size, size_t nmemb, void* data)
@@ -258,9 +259,17 @@ int main()
 	// 4. compare PDFs (new one?, new version?, changed version? -> hash the file -> save file if it is a new one) //
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+	std::string temp_files_location2 = "../temp_downloads/aa/zz/";	// location where the temp downloaded files are stored
+
 	std::string teststring = "http://phys.ik.cx/physics/aufgabensammlung523.pdf";
 	std::string extracted_file_name = filename_extraction(teststring, "/");
- 	fetch_PDF_from_URL("http://phys.ik.cx/physics/aufgabensammlung523.pdf", extracted_file_name, temp_files_location);
+// 	fetch_PDF_from_URL("http://phys.ik.cx/physics/aufgabensammlung523.pdf", extracted_file_name, temp_files_location2);
+
+	if (!boost::filesystem::exists(temp_files_location2))
+	{
+		std::cout << "blabla" << std::endl;
+	}
 
 	//////////////////////////////////
 	// 5. create a log of the crawl //
