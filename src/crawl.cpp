@@ -8,6 +8,8 @@
 #include <filesystem>
 #include <boost/crc.hpp>
 #include <istream>
+#include <chrono>
+#include <ctime>
 
 // datastream (fetched source files) used by fetch_source_single_page
 size_t write_fetched_data(void* ptr, size_t size, size_t nmemb, void* data)
@@ -220,7 +222,7 @@ int main()
 	std::string curricula_files_location = "curricula/";	// location where the downloaded curricula are stored
 
 	// defome the names of the folders where the curricula are stored to (corresponds to the numbering elements in the search_str std::vector)
-	std::vector<std::string> folder_name_structure {"Bachelor", "Master", "Doktor", "Erweiterungsstudium", "Gemeinsame Studienprogramme", "Alte Studienpläne"};
+	std::vector<std::string> folder_name_structure{"Bachelor/", "Master/", "Doktor/", "Erweiterungsstudium/", "Gemeinsame Studienprogramme/", "Alte Studienpläne/"};
 //	std::vector<std::string> search_str {"BSc", "MSc", "Doktor", "Erweiterungsstudium", "Gemeinsame_Studienprogramme", "Alte_Studienplaene"};
 
 
@@ -323,7 +325,41 @@ int main()
 				extract_url_descr[i].erase(search_pos, erase_search.length());
 			}
 
+			// check if the folder already exists
+			std::string check_folder_exist = curricula_files_location+folder_name_structure[extract_url_info[i]]+extract_url_descr[i];
+			std::cout << "check folder exist: " << check_folder_exist << std::endl;
 
+			if (!boost::filesystem::exists(check_folder_exist))	// folder does not exist
+			{
+				// create the folder
+				std::filesystem::create_directories(check_folder_exist);
+
+				// new folder -> just copy the file into the folder (since it is the first  file in this folder)
+				// old/new file paths
+				std::string old_file_path = temp_files_location+filename_extraction(extract_PDF_urls[i], "/");
+				std::string new_file_path = check_folder_exist+"/"+filename_extraction(extract_PDF_urls[i], "/");
+
+				// fetch the date of today to insert it into the filename
+				std::time_t now = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
+
+				char temp_insert_date[100] = {0};
+				std::strftime(temp_insert_date, sizeof(temp_insert_date), "(%Y-%m-%d)", std::localtime(&now));
+
+				// manipulate the std::string
+				new_file_path.insert(new_file_path.size()-4, temp_insert_date);
+
+				// move the (renamed) file
+				boost::filesystem::copy_file(old_file_path, new_file_path);
+			}
+			else
+			{
+				// folder already exists
+			}
+
+
+
+
+// 	std::vector<std::string> folder_name_structure {"Bachelor/", "Master/", "Doktor/", "Erweiterungsstudium/", "Gemeinsame Studienprogramme/", "Alte Studienpläne/"};
 
 
 			std::cout << extract_url_info[i] << " | " << extract_PDF_urls[i] << " | " << extract_url_descr[i] << std::endl;
@@ -346,6 +382,7 @@ int main()
 
 	std::cout << std::endl;
 
+	// fetch the (names of the) files in the folder
 	std::string path = temp_files_location;
 	for (const auto & entry : std::filesystem::directory_iterator(path))
 	{
@@ -356,10 +393,6 @@ int main()
 
 	exit(1);
 
-	if (!boost::filesystem::exists(curricula_files_location))	// folder does not exist
-	{
-		std::cout << "folder does not exist" << std::endl;
-	}
 */
 
 	//////////////////////////////////
