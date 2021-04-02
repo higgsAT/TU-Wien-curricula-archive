@@ -60,14 +60,14 @@ size_t write_file_data(void* ptr, size_t size, size_t nmemb, FILE* stream)
 
 
 // download a PDF given by an URL
-void fetch_PDF_from_URL(std::string fetch_pdf_url, std::string filename, std::string temp_files_location)
+void fetch_PDF_from_URL(std::string fetch_pdf_url, std::string filename, std::string temp_files_path)
 {
 	CURL* curl;
 	FILE* fp;
 	CURLcode res;
 
 	// define locations where to save the file temporarily
-	std::string outfilename = temp_files_location+filename;
+	std::string outfilename = temp_files_path+filename;
 	const char *cfilename = outfilename.c_str();
 
 	curl = curl_easy_init();
@@ -185,6 +185,17 @@ void extract_PDF_URL_and_descriptions(std::string result, std::vector<std::strin
 					// only add the information _if_ this element is not already in the list (else the PDF would be added multiple times
 					if (already_in_list == false)
 					{
+						// clean-up the url (remove undesired strings)
+						std::string delete_string_search = "&nbsp;";	// search and remove this string from the folder name
+						std::string::size_type del_pos_search = extract_desc.find(delete_string_search);	// search the position of this string
+
+						// string to delete has been found -> remove this part from the url (which is used as a folder name later on)
+						if (del_pos_search != std::string::npos)	// if a position has been found it will be removed
+						{
+							extract_desc.erase(del_pos_search, delete_string_search.length());
+						}
+
+						// push the description to the std::vector
 						fetched_URLs_descriptions.push_back(extract_desc);
 					}
 				}
@@ -243,10 +254,11 @@ uint32_t crc32(std::string file_read_open)
 int main()
 {
 	// file paths
-	std::string temp_files_location = "temp_downloads/";	// location where the temp downloaded files are stored
-	std::string curricula_files_location = "curricula/";	// location where the downloaded curricula are stored
+	std::string temp_files_path			= "temp_downloads/";	// location where the temp downloaded files are stored
+	std::string curricula_files_path	= "curricula/";			// location where the downloaded curricula are stored
+	std::string log_files_path			= "logs/";				// location where the logs (info about the crawl) are stored
 
-	// defome the names of the folders where the curricula are stored to (corresponds to the numbering elements in the search_str std::vector)
+	// define the names of the folders where the curricula are stored to (corresponds to the numbering elements in the search_str std::vector)
 	std::vector<std::string> folder_name_structure{"Bachelor/", "Master/", "Doktor/", "Erweiterungsstudium/", "Gemeinsame Studienprogramme/", "Alte Studienpläne/"};
 
 	// the elements by which the curricula are sorted by
@@ -255,8 +267,9 @@ int main()
 	// fetch the date of today to insert it into the filename
 	std::time_t now = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
 	char temp_insert_date[100] = {0};
-	std::strftime(temp_insert_date, sizeof(temp_insert_date), "(%Y-%m-%d %X)", std::localtime(&now));
+	std::strftime(temp_insert_date, sizeof(temp_insert_date), " (%Y-%m-%d %X)", std::localtime(&now));
 
+/*
 	//////////////////////////////////////////
 	// 1. fetch the source code of the page //
 	//////////////////////////////////////////
@@ -328,7 +341,7 @@ int main()
 			std::string extracted_file_name = filename_extraction(extract_PDF_urls[i], "/");
 
 			// download a single PDF given by an URL
-	//		fetch_PDF_from_URL(TLD+extract_PDF_urls[i], extracted_file_name, temp_files_location);
+	//		fetch_PDF_from_URL(TLD+extract_PDF_urls[i], extracted_file_name, temp_files_path);
 		}
 	}
 
@@ -355,11 +368,11 @@ int main()
 			}
 
 			// check if the folder already exists
-			std::string check_folder_exist = curricula_files_location+folder_name_structure[extract_url_info[i]]+extract_url_descr[i];
+			std::string check_folder_exist = curricula_files_path+folder_name_structure[extract_url_info[i]]+extract_url_descr[i];
 	//		std::cout << "check folder exist: " << check_folder_exist << std::endl;
 
 			// old/new file paths
-			std::string old_file_path = temp_files_location+filename_extraction(extract_PDF_urls[i], "/");
+			std::string old_file_path = temp_files_path+filename_extraction(extract_PDF_urls[i], "/");
 			std::string new_file_path = check_folder_exist+"/"+filename_extraction(extract_PDF_urls[i], "/");
 
 			if (!boost::filesystem::exists(check_folder_exist))	// folder does not exist (create folder, move the file)
@@ -430,7 +443,7 @@ int main()
 	int count_unsorted_files = 0;	// amount of files remaining in the temp download folder after running the program
 
 	// loop through all files found in the temp download folder
-	for (const auto & entry : std::filesystem::directory_iterator(temp_files_location))
+	for (const auto & entry : std::filesystem::directory_iterator(temp_files_path))
 	{
 		std::string check_file_path_a = entry.path().filename().string();
 
@@ -438,11 +451,20 @@ int main()
 		count_unsorted_files++;
 	}
 
-	std::cout << "a total of " << count_unsorted_files << " files were not sorted and remain in the directory " << temp_files_location << std::endl;
-
+	// more than one file remained unsorted in the temp download folder
+	if (count_unsorted_files > 0)
+	{
+		std::cout << "a total of " << count_unsorted_files << " files were not sorted and remain in the directory " << temp_files_path << std::endl;
+	}
+*/
 	//////////////////////////////////
 	// 6. create a log of the crawl //
 	//////////////////////////////////
+
+	std::ofstream logfile_ofstream;
+
+	logfile_ofstream.open(log_files_path+temp_insert_date+"_log"+".txt", std::ios_base::app);
+	logfile_ofstream << "Daasasta"; 
 
 	return 0;
 }
