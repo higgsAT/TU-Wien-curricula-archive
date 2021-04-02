@@ -10,6 +10,7 @@
 #include <istream>
 #include <chrono>
 #include <ctime>
+#include <cstdio>
 
 // datastream (fetched source files) used by fetch_source_single_page
 size_t write_fetched_data(void* ptr, size_t size, size_t nmemb, void* data)
@@ -86,6 +87,22 @@ void fetch_PDF_from_URL(std::string fetch_pdf_url, std::string filename, std::st
 }
 
 
+// cut the std::string / extract the filename which is the last part of the std::string
+std::string filename_extraction(std::string process_string, std::string delimiter)
+{
+	size_t pos = 0;
+	std::string token;
+
+	while ((pos = process_string.find(delimiter)) != std::string::npos)
+	{
+		token = process_string.substr(0, pos);
+		process_string.erase(0, pos + delimiter.length());	// remove the parts of the string left of the delimiter
+	}
+
+	return process_string;	// return the last part of the std::string (the filename)
+}
+
+
 // starting from the obtained page source code, this function extracts the links to the PDFs as well as the information about the PDFs. The obtained
 // information is stored in the two std::vectors extracted_data1 and extracted_data2
 void extract_PDF_URL_and_descriptions(std::string result, std::vector<std::string>& fetched_URLs, std::vector<std::string>& fetched_URLs_descriptions)
@@ -109,6 +126,8 @@ void extract_PDF_URL_and_descriptions(std::string result, std::vector<std::strin
 			// extract the link to the PDF
 			std::string extract_URL;	// stores the link to the PDF
 
+			bool already_in_list = false;
+
 			while (close_URL == false)
 			{
 				i++;
@@ -117,7 +136,23 @@ void extract_PDF_URL_and_descriptions(std::string result, std::vector<std::strin
 				{
 					close_URL = true;
 					extract_URL.append(result.begin()+start_extract_pos_URL, result.begin()+i);
-					fetched_URLs.push_back(extract_URL);
+
+					// check whether this entry is already in the std::vector (multiple links leading to the same PDF)
+					for (int j = 0; j < fetched_URLs.size(); j++)
+					{
+
+						if (filename_extraction(fetched_URLs[j], "/") == filename_extraction(extract_URL, "/"))
+						{
+							already_in_list = true;
+							break;
+						}
+					}
+
+					// only add the information _if_ this element is not already in the list (else the PDF would be added multiple times
+					if (already_in_list == false)
+					{
+						fetched_URLs.push_back(extract_URL);
+					}
 				}
 				else if (i == result.length())	// error .. end of string while tag is open!
 				{
@@ -146,7 +181,12 @@ void extract_PDF_URL_and_descriptions(std::string result, std::vector<std::strin
 				{
 					close_descr = true;
 					extract_desc.append(result.begin()+start_extract_pos_desc, result.begin()+i);
-					fetched_URLs_descriptions.push_back(extract_desc);
+
+					// only add the information _if_ this element is not already in the list (else the PDF would be added multiple times
+					if (already_in_list == false)
+					{
+						fetched_URLs_descriptions.push_back(extract_desc);
+					}
 				}
 				else if (i == result.length())	// error .. end of string while tag is open!
 				{
@@ -159,21 +199,6 @@ void extract_PDF_URL_and_descriptions(std::string result, std::vector<std::strin
 	}
 }
 
-
-// cut the std::string / extract the filename which is the last part of the std::string
-std::string filename_extraction(std::string process_string, std::string delimiter)
-{
-	size_t pos = 0;
-	std::string token;
-
-	while ((pos = process_string.find(delimiter)) != std::string::npos)
-	{
-		token = process_string.substr(0, pos);
-		process_string.erase(0, pos + delimiter.length());	// remove the parts of the string left of the delimiter
-	}
-
-	return process_string;	// return the last part of the std::string (the filename)
-}
 
 // courtesy: Toby Speight (https://codereview.stackexchange.com/questions/133483/calculate-the-crc32-of-the-contents-of-a-file-using-boost)
 // calculates the crc32 checksum for a given file
@@ -293,7 +318,7 @@ int main()
 		if (extract_url_info[i] > -1)
 		{
 			// cout the PDF URLs
-			std::cout << "URL: (" << extract_url_info[i] << "): " << extract_PDF_urls[i] << std::endl;
+	//		std::cout << "URL: (" << extract_url_info[i] << "): " << extract_PDF_urls[i] << std::endl;
 
 			// TODO: check whether the file already exists in this (temp) folder!
 
@@ -303,7 +328,6 @@ int main()
 	//		fetch_PDF_from_URL(TLD+extract_PDF_urls[i], extracted_file_name, temp_files_location);
 		}
 	}
-
 
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// 4. compare PDFs (new one?, new version?, changed version? -> hash the file -> save file if it is a new one) //
@@ -316,6 +340,8 @@ int main()
 	{
 		if (extract_url_info[i] > -1)
 		{
+	//		std::cout << std::endl;
+
 			// URL description clean-up ('amp;')
 			std::string erase_search = "amp;";
 			std::string::size_type search_pos = extract_url_descr[i].find(erase_search);	// search the position of this string
@@ -327,10 +353,11 @@ int main()
 
 			// check if the folder already exists
 			std::string check_folder_exist = curricula_files_location+folder_name_structure[extract_url_info[i]]+extract_url_descr[i];
-			std::cout << "check folder exist: " << check_folder_exist << std::endl;
+	//		std::cout << "check folder exist: " << check_folder_exist << std::endl;
 
 			if (!boost::filesystem::exists(check_folder_exist))	// folder does not exist
 			{
+	//			std::cout << "create folder" << std::endl;
 				// create the folder
 				std::filesystem::create_directories(check_folder_exist);
 
@@ -347,9 +374,14 @@ int main()
 
 				// manipulate the std::string
 				new_file_path.insert(new_file_path.size()-4, temp_insert_date);
+	//			std::cout << "changed filename: " << new_file_path << std::endl;
 
-				// move the (renamed) file
-				boost::filesystem::copy_file(old_file_path, new_file_path);
+				// move the file
+				boost::filesystem::rename(old_file_path, new_file_path);
+
+				// delete the temporarily downloaed file
+// 				std::cout << "remove: " << old_file_path << std::endl;
+//  				remove(old_file_path.c_str()); // delete file
 			}
 			else
 			{
@@ -362,7 +394,7 @@ int main()
 // 	std::vector<std::string> folder_name_structure {"Bachelor/", "Master/", "Doktor/", "Erweiterungsstudium/", "Gemeinsame Studienprogramme/", "Alte Studienpläne/"};
 
 
-			std::cout << extract_url_info[i] << " | " << extract_PDF_urls[i] << " | " << extract_url_descr[i] << std::endl;
+	//		std::cout << extract_url_info[i] << " | " << extract_PDF_urls[i] << " | " << extract_url_descr[i] << std::endl;
 		}
 	}
 
