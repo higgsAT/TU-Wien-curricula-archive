@@ -355,77 +355,74 @@ int main()
 			std::string check_folder_exist = curricula_files_location+folder_name_structure[extract_url_info[i]]+extract_url_descr[i];
 	//		std::cout << "check folder exist: " << check_folder_exist << std::endl;
 
-			if (!boost::filesystem::exists(check_folder_exist))	// folder does not exist
+			// old/new file paths
+			std::string old_file_path = temp_files_location+filename_extraction(extract_PDF_urls[i], "/");
+			std::string new_file_path = check_folder_exist+"/"+filename_extraction(extract_PDF_urls[i], "/");
+
+			// fetch the date of today to insert it into the filename
+			std::time_t now = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
+
+			char temp_insert_date[100] = {0};
+			std::strftime(temp_insert_date, sizeof(temp_insert_date), "(%Y-%m-%d)", std::localtime(&now));
+
+			if (!boost::filesystem::exists(check_folder_exist))	// folder does not exist (create folder, move the file)
 			{
-	//			std::cout << "create folder" << std::endl;
-				// create the folder
+				// create the folder and just copy the file into the folder (since it is the first file in this folder)
 				std::filesystem::create_directories(check_folder_exist);
 
-				// new folder -> just copy the file into the folder (since it is the first  file in this folder)
-				// old/new file paths
-				std::string old_file_path = temp_files_location+filename_extraction(extract_PDF_urls[i], "/");
-				std::string new_file_path = check_folder_exist+"/"+filename_extraction(extract_PDF_urls[i], "/");
-
-				// fetch the date of today to insert it into the filename
-				std::time_t now = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
-
-				char temp_insert_date[100] = {0};
-				std::strftime(temp_insert_date, sizeof(temp_insert_date), "(%Y-%m-%d)", std::localtime(&now));
-
-				// manipulate the std::string
+				// add the crawled date to the file name
 				new_file_path.insert(new_file_path.size()-4, temp_insert_date);
-	//			std::cout << "changed filename: " << new_file_path << std::endl;
 
-				// move the file
+				// move the file to its final destination
 				boost::filesystem::rename(old_file_path, new_file_path);
-
-				// delete the temporarily downloaed file
-// 				std::cout << "remove: " << old_file_path << std::endl;
-//  				remove(old_file_path.c_str()); // delete file
 			}
-			else
+			else	// folder already exists -> check via crc32 checksum whether the file is new or not
 			{
-				// folder already exists
+				// determine the crc32 checksum of the file which is being sorted into the folder
+				uint32_t crc32_checksum_temp_file = crc32(old_file_path);
+
+				// fetch the (names of the) files in the folder
+				std::string path = check_folder_exist;
+				bool file_already_in_folder = false;
+
+				// loop through all files found at this path
+				for (const auto & entry : std::filesystem::directory_iterator(path))
+				{
+					// fetch the name of the files in this folder and build the file path
+					std::string check_file_path = check_folder_exist+"/"+entry.path().filename().string();
+
+					// create the crc32 checksum for this file
+					uint32_t crc32_checksum_file_path = crc32(check_file_path);
+
+					if (crc32_checksum_file_path == crc32_checksum_temp_file)	// file already in the folder -> delete file in temp folder
+					{
+						file_already_in_folder = true;
+
+						// remove this file in the temp folder
+						int remove_flag = std::remove(old_file_path.c_str());
+
+						// check for success of deletion
+						if (remove_flag != 0)
+						{
+							std::cout << "deletion of file: " << old_file_path << " failed" << std::endl;
+						}
+
+						break;
+					}
+				}
+
+				// file not found in the folder (by comparing the crc32 checksum) -> move the file
+				if (file_already_in_folder == false)
+				{
+					// add the crawled date to the file name
+					new_file_path.insert(new_file_path.size()-4, temp_insert_date);
+
+					// move the file to its final destination
+					boost::filesystem::rename(old_file_path, new_file_path);
+				}
 			}
-
-
-
-
-// 	std::vector<std::string> folder_name_structure {"Bachelor/", "Master/", "Doktor/", "Erweiterungsstudium/", "Gemeinsame Studienprogramme/", "Alte Studienpläne/"};
-
-
-	//		std::cout << extract_url_info[i] << " | " << extract_PDF_urls[i] << " | " << extract_url_descr[i] << std::endl;
 		}
 	}
-
-/*
-1 | /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Software_Engineering_And_Internet_Computing_2020.pdf | Software Engineering &amp; Internet Computing
-1 | /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Technische_Informatik_2020.pdf | Technische Informatik
-1 | /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Maschinenbau_2020.pdf | Maschinenbau
-*/
-
-/*
-
-
-	std::string file_read_open = "temp_downloads/test.dat";
-	uint32_t crc32_checksum = crc32(file_read_open);
-	std::cout << "crc32 checksum: " << crc32_checksum << std::endl;
-
-
-	std::cout << std::endl;
-
-	// fetch the (names of the) files in the folder
-	std::string path = temp_files_location;
-	for (const auto & entry : std::filesystem::directory_iterator(path))
-	{
-		std::cout << entry.path().filename() << std::endl;
-	}
-
-	std::cout << std::endl;
-
-	exit(1);
-
-*/
 
 	//////////////////////////////////
 	// 5. create a log of the crawl //
