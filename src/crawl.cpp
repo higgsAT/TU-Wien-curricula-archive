@@ -248,8 +248,14 @@ int main()
 
 	// defome the names of the folders where the curricula are stored to (corresponds to the numbering elements in the search_str std::vector)
 	std::vector<std::string> folder_name_structure{"Bachelor/", "Master/", "Doktor/", "Erweiterungsstudium/", "Gemeinsame Studienprogramme/", "Alte Studienpläne/"};
-//	std::vector<std::string> search_str {"BSc", "MSc", "Doktor", "Erweiterungsstudium", "Gemeinsame_Studienprogramme", "Alte_Studienplaene"};
 
+	// the elements by which the curricula are sorted by
+	std::vector<std::string> search_str {"BSc", "MSc", "Doktor", "Erweiterungsstudium", "Gemeinsame_Studienprogramme", "Alte_Studienplaene"};
+
+	// fetch the date of today to insert it into the filename
+	std::time_t now = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
+	char temp_insert_date[100] = {0};
+	std::strftime(temp_insert_date, sizeof(temp_insert_date), "(%Y-%m-%d %X)", std::localtime(&now));
 
 	//////////////////////////////////////////
 	// 1. fetch the source code of the page //
@@ -285,9 +291,6 @@ int main()
 	// extract additional information (BSc-, MSc-, expiring curriculum) -> iterate through each (found) element
 	for (int i = 0; i < extract_PDF_urls.size(); i++)
 	{
-		// the elements by which the curricula are sorted by
-		std::vector<std::string> search_str {"BSc", "MSc", "Doktor", "Erweiterungsstudium", "Gemeinsame_Studienprogramme", "Alte_Studienplaene"};
-
 		bool found_element = false;
 
 		// determine which curricula is which (of type)
@@ -359,12 +362,6 @@ int main()
 			std::string old_file_path = temp_files_location+filename_extraction(extract_PDF_urls[i], "/");
 			std::string new_file_path = check_folder_exist+"/"+filename_extraction(extract_PDF_urls[i], "/");
 
-			// fetch the date of today to insert it into the filename
-			std::time_t now = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
-
-			char temp_insert_date[100] = {0};
-			std::strftime(temp_insert_date, sizeof(temp_insert_date), "(%Y-%m-%d)", std::localtime(&now));
-
 			if (!boost::filesystem::exists(check_folder_exist))	// folder does not exist (create folder, move the file)
 			{
 				// create the folder and just copy the file into the folder (since it is the first file in this folder)
@@ -424,8 +421,27 @@ int main()
 		}
 	}
 
+	///////////////////////
+	// 5. closing checks //
+	///////////////////////
+
+	// check whether the temp download folder is empty
+
+	int count_unsorted_files = 0;	// amount of files remaining in the temp download folder after running the program
+
+	// loop through all files found in the temp download folder
+	for (const auto & entry : std::filesystem::directory_iterator(temp_files_location))
+	{
+		std::string check_file_path_a = entry.path().filename().string();
+
+		std::cout << "file unsorted: " << check_file_path_a << std::endl;
+		count_unsorted_files++;
+	}
+
+	std::cout << "a total of " << count_unsorted_files << " files were not sorted and remain in the directory " << temp_files_location << std::endl;
+
 	//////////////////////////////////
-	// 5. create a log of the crawl //
+	// 6. create a log of the crawl //
 	//////////////////////////////////
 
 	return 0;
