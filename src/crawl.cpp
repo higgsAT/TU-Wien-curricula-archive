@@ -11,6 +11,7 @@
 #include <chrono>
 #include <ctime>
 #include <cstdio>
+#include <iomanip>
 
 // datastream (fetched source files) used by fetch_source_single_page
 size_t write_fetched_data(void* ptr, size_t size, size_t nmemb, void* data)
@@ -251,8 +252,26 @@ uint32_t crc32(std::string file_read_open)
 	}
 }
 
+// function inserting the entries into the logfile
+void insert_logfile(std::string path_to_logfile, std::string msg_log1)
+{
+	std::ofstream logfile_ofstream;
+	logfile_ofstream.open(path_to_logfile+"_log"+".txt", std::ios_base::app);
+
+	logfile_ofstream << std::setw(20);
+	logfile_ofstream << "Daasasta";
+
+	logfile_ofstream << std::setw(20);
+	logfile_ofstream << "aa" << std::endl;
+
+}
+
 int main()
 {
+	// the site one wants to crawl
+	std::string TLD						= "https://www.tuwien.at";	// top-level-domain
+	std::string page_to_crawl			= "/tu-wien/organisation/zentrale-bereiche/studienabteilung/studienplaene";
+
 	// file paths
 	std::string temp_files_path			= "temp_downloads/";	// location where the temp downloaded files are stored
 	std::string curricula_files_path	= "curricula/";			// location where the downloaded curricula are stored
@@ -266,21 +285,26 @@ int main()
 
 	// fetch the date of today to insert it into the filename
 	std::time_t now = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
-	char temp_insert_date[100] = {0};
+	char temp_insert_date[100]			= {0};
+	char temp_insert_date_logfile[100]	= {0};
 	std::strftime(temp_insert_date, sizeof(temp_insert_date), " (%Y-%m-%d %X)", std::localtime(&now));
+	std::strftime(temp_insert_date_logfile, sizeof(temp_insert_date), "%Y-%m-%d %X", std::localtime(&now));
 
+	// create logfile ofstream
+	std::string test1 = "KUH";
+	insert_logfile(log_files_path+temp_insert_date_logfile, test1);
 /*
 	//////////////////////////////////////////
 	// 1. fetch the source code of the page //
 	//////////////////////////////////////////
 
-	// the site one wants to crawl
-	std::string TLD				= "https://www.tuwien.at";	// top-level-domain
-	std::string page_to_crawl	= "/tu-wien/organisation/zentrale-bereiche/studienabteilung/studienplaene";
-
-
 	// fetch the source code of the given page
 	std::string result = fetch_source_single_page(TLD+page_to_crawl);
+
+	// write the crawled source file to the disk (in the log folder)
+	std::ofstream source_of_page_ofstream;
+	source_of_page_ofstream.open(log_files_path+temp_insert_date_logfile+"_source"+".txt", std::ios_base::app);
+	source_of_page_ofstream << result;
 
 	///////////////////////////////////////////////////////////////////////////////
 	// 2. parse the obtained source code (extract PDF links, descriptions, etc.) //
@@ -334,7 +358,7 @@ int main()
 		if (extract_url_info[i] > -1)
 		{
 			// cout the PDF URLs
-	//		std::cout << "URL: (" << extract_url_info[i] << "): " << extract_PDF_urls[i] << std::endl;
+			std::cout << "URL: (" << extract_url_info[i] << "): " << extract_PDF_urls[i] << std::endl;
 
 			// TODO: check whether the file already exists in this (temp) folder!
 
@@ -342,6 +366,8 @@ int main()
 
 			// download a single PDF given by an URL
 	//		fetch_PDF_from_URL(TLD+extract_PDF_urls[i], extracted_file_name, temp_files_path);
+
+			// TODO: check whether the download was successful, i.e., check if the downloaded file exists
 		}
 	}
 
@@ -460,11 +486,6 @@ int main()
 	//////////////////////////////////
 	// 6. create a log of the crawl //
 	//////////////////////////////////
-
-	std::ofstream logfile_ofstream;
-
-	logfile_ofstream.open(log_files_path+temp_insert_date+"_log"+".txt", std::ios_base::app);
-	logfile_ofstream << "Daasasta"; 
 
 	return 0;
 }
