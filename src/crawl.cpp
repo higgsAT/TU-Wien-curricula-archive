@@ -13,6 +13,44 @@
 #include <cstdio>
 #include <iomanip>
 
+// function inserting the entries into the logfile
+void insert_logfile(std::string path_to_logfile, std::string msg_log1, std::string msg_log2 = "")
+{
+	// open the (log) file to write into
+	std::ofstream logfile_ofstream;
+	logfile_ofstream.open(path_to_logfile+"_log"+".txt", std::ios_base::app);
+
+	// get the time and date
+	std::time_t now = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
+	char temp_insert_date_logfile[100] = {0};
+	std::strftime(temp_insert_date_logfile, sizeof(temp_insert_date_logfile), "%Y-%m-%d %X ", std::localtime(&now));
+
+	logfile_ofstream << temp_insert_date_logfile;
+	std::cout << temp_insert_date_logfile;
+
+	int padLen = 40;	// whitespace padding of the string
+	if (msg_log1.size() > padLen)	// prevent an error when the logmsg1 is longer than the set paddin length
+	{
+		padLen = msg_log1.size();
+	}
+
+	msg_log1.append(padLen - msg_log1.size(), ' ');
+
+	logfile_ofstream << msg_log1;
+	std::cout << msg_log1;
+
+	if (msg_log2 != "")
+	{
+		logfile_ofstream << msg_log2 << std::endl;
+		std::cout << msg_log2 << std::endl;
+	}
+	else
+	{
+		logfile_ofstream << std::endl;
+		std::cout << std::endl;
+	}
+}
+
 // datastream (fetched source files) used by fetch_source_single_page
 size_t write_fetched_data(void* ptr, size_t size, size_t nmemb, void* data)
 {
@@ -106,7 +144,7 @@ std::string filename_extraction(std::string process_string, std::string delimite
 
 // starting from the obtained page source code, this function extracts the links to the PDFs as well as the information about the PDFs. The obtained
 // information is stored in the two std::vectors extracted_data1 and extracted_data2
-void extract_PDF_URL_and_descriptions(std::string result, std::vector<std::string>& fetched_URLs, std::vector<std::string>& fetched_URLs_descriptions)
+void extract_PDF_URL_and_descriptions(std::string result, std::vector<std::string>& fetched_URLs, std::vector<std::string>& fetched_URLs_descriptions, std::string logpath)
 {
 	// extract the links and descriptions of the PDFs
 	int shift_pos = 0;
@@ -193,6 +231,7 @@ void extract_PDF_URL_and_descriptions(std::string result, std::vector<std::strin
 						// string to delete has been found -> remove this part from the url (which is used as a folder name later on)
 						if (del_pos_search != std::string::npos)	// if a position has been found it will be removed
 						{
+							insert_logfile(logpath, "cleanup extract_desc("+delete_string_search+"):", extract_desc);
 							extract_desc.erase(del_pos_search, delete_string_search.length());
 						}
 
@@ -252,25 +291,11 @@ uint32_t crc32(std::string file_read_open)
 	}
 }
 
-// function inserting the entries into the logfile
-void insert_logfile(std::string path_to_logfile, std::string msg_log1)
-{
-	std::ofstream logfile_ofstream;
-	logfile_ofstream.open(path_to_logfile+"_log"+".txt", std::ios_base::app);
-
-	logfile_ofstream << std::setw(20);
-	logfile_ofstream << "Daasasta";
-
-	logfile_ofstream << std::setw(20);
-	logfile_ofstream << "aa" << std::endl;
-
-}
-
 int main()
 {
 	// the site one wants to crawl
-	std::string TLD						= "https://www.tuwien.at";	// top-level-domain
-	std::string page_to_crawl			= "/tu-wien/organisation/zentrale-bereiche/studienabteilung/studienplaene";
+	std::string TLD						= "https://www.tuwien.at";													// top-level-domain
+	std::string page_to_crawl			= "/tu-wien/organisation/zentrale-bereiche/studienabteilung/studienplaene";	// the page which will be crawled
 
 	// file paths
 	std::string temp_files_path			= "temp_downloads/";	// location where the temp downloaded files are stored
@@ -280,26 +305,35 @@ int main()
 	// define the names of the folders where the curricula are stored to (corresponds to the numbering elements in the search_str std::vector)
 	std::vector<std::string> folder_name_structure{"Bachelor/", "Master/", "Doktor/", "Erweiterungsstudium/", "Gemeinsame Studienprogramme/", "Alte Studienpläne/"};
 
-	// the elements by which the curricula are sorted by
-	std::vector<std::string> search_str {"BSc", "MSc", "Doktor", "Erweiterungsstudium", "Gemeinsame_Studienprogramme", "Alte_Studienplaene"};
+	// the elements by which the curricula are sorted into (according to these searchstrings)
+	std::vector<std::string> search_str{"BSc", "MSc", "Doktor", "Erweiterungsstudium", "Gemeinsame_Studienprogramme", "Alte_Studienplaene"};
 
-	// fetch the date of today to insert it into the filename
+	// fetch the date of today to insert it into the filename (and the logfile name)
 	std::time_t now = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
 	char temp_insert_date[100]			= {0};
 	char temp_insert_date_logfile[100]	= {0};
 	std::strftime(temp_insert_date, sizeof(temp_insert_date), " (%Y-%m-%d %X)", std::localtime(&now));
-	std::strftime(temp_insert_date_logfile, sizeof(temp_insert_date), "%Y-%m-%d %X", std::localtime(&now));
+	std::strftime(temp_insert_date_logfile, sizeof(temp_insert_date_logfile), "%Y-%m-%d %X", std::localtime(&now));
 
-	// create logfile ofstream
-	std::string test1 = "KUH";
-	insert_logfile(log_files_path+temp_insert_date_logfile, test1);
-/*
+ 	insert_logfile(log_files_path+temp_insert_date_logfile, "start");
+ 	insert_logfile(log_files_path+temp_insert_date_logfile, "TLD: ", TLD);
+ 	insert_logfile(log_files_path+temp_insert_date_logfile, "crawled site: ", page_to_crawl);
+ 	insert_logfile(log_files_path+temp_insert_date_logfile, "temp download folder: ", temp_files_path);
+ 	insert_logfile(log_files_path+temp_insert_date_logfile, "curricula folder: ", curricula_files_path);
+
+	for (int i = 0; i < search_str.size(); i++)
+	{
+		insert_logfile(log_files_path+temp_insert_date_logfile, "searchstr: "+std::to_string(i), search_str[i]);
+	}
+
 	//////////////////////////////////////////
 	// 1. fetch the source code of the page //
 	//////////////////////////////////////////
 
 	// fetch the source code of the given page
+ 	insert_logfile(log_files_path+temp_insert_date_logfile, "fetching page source");
 	std::string result = fetch_source_single_page(TLD+page_to_crawl);
+ 	insert_logfile(log_files_path+temp_insert_date_logfile, "page crawling donw");
 
 	// write the crawled source file to the disk (in the log folder)
 	std::ofstream source_of_page_ofstream;
@@ -309,6 +343,7 @@ int main()
 	///////////////////////////////////////////////////////////////////////////////
 	// 2. parse the obtained source code (extract PDF links, descriptions, etc.) //
 	///////////////////////////////////////////////////////////////////////////////
+	insert_logfile(log_files_path+temp_insert_date_logfile, "parsing page source");
 
 	// define the structure in which the found data will be stored (two vectors of type std::String)
 	std::vector<std::string> extract_PDF_urls;	// URLs pointing to the PDFs to be downloaded
@@ -316,7 +351,7 @@ int main()
 	std::vector<int> extract_url_info;			// information about this curricula (from the two above given data entries)
 
 	// extract the data
-	extract_PDF_URL_and_descriptions(result, extract_PDF_urls, extract_url_descr);
+	extract_PDF_URL_and_descriptions(result, extract_PDF_urls, extract_url_descr, log_files_path+temp_insert_date_logfile);
 
 	// check whether both std::vectors have the same size
 	if (extract_PDF_urls.size() != extract_url_descr.size())
@@ -337,6 +372,7 @@ int main()
 			{
 				extract_url_info.push_back(j);
 				found_element = true;
+			 	insert_logfile(log_files_path+temp_insert_date_logfile, "extracted file["+std::to_string(j)+"]:", extract_PDF_urls[i]+"|"+extract_url_descr[i]);
 				break;
 			}
 		}
@@ -348,9 +384,13 @@ int main()
 		}
 	}
 
+	insert_logfile(log_files_path+temp_insert_date_logfile, "parsing page done");
+
 	////////////////////////////////////////////
 	// 3. download (all) the PDFs temporarily //
 	////////////////////////////////////////////
+
+	insert_logfile(log_files_path+temp_insert_date_logfile, "downloading PDFs");
 
 	for (int i = 0; i < extract_PDF_urls.size(); i++)
 	{
@@ -358,18 +398,20 @@ int main()
 		if (extract_url_info[i] > -1)
 		{
 			// cout the PDF URLs
-			std::cout << "URL: (" << extract_url_info[i] << "): " << extract_PDF_urls[i] << std::endl;
+		 	insert_logfile(log_files_path+temp_insert_date_logfile, "downloading file["+std::to_string(extract_url_info[i])+"]:", extract_PDF_urls[i]);
 
 			// TODO: check whether the file already exists in this (temp) folder!
 
 			std::string extracted_file_name = filename_extraction(extract_PDF_urls[i], "/");
 
 			// download a single PDF given by an URL
-	//		fetch_PDF_from_URL(TLD+extract_PDF_urls[i], extracted_file_name, temp_files_path);
+			fetch_PDF_from_URL(TLD+extract_PDF_urls[i], extracted_file_name, temp_files_path);
 
 			// TODO: check whether the download was successful, i.e., check if the downloaded file exists
 		}
 	}
+
+	insert_logfile(log_files_path+temp_insert_date_logfile, "downloading PDFs done");
 
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// 4. compare PDFs (new one?, new version?, changed version? -> hash the file -> save file if it is a new one) //
@@ -382,20 +424,18 @@ int main()
 	{
 		if (extract_url_info[i] > -1)
 		{
-	//		std::cout << std::endl;
-
 			// URL description clean-up ('amp;')
 			std::string erase_search = "amp;";
 			std::string::size_type search_pos = extract_url_descr[i].find(erase_search);	// search the position of this string
 
 			if (search_pos != std::string::npos)	// if a position has been found it will be removed
 			{
+				insert_logfile(log_files_path+temp_insert_date_logfile, "cleanup extract_url_descr("+erase_search+"):", extract_url_descr[i]);
 				extract_url_descr[i].erase(search_pos, erase_search.length());
 			}
 
 			// check if the folder already exists
 			std::string check_folder_exist = curricula_files_path+folder_name_structure[extract_url_info[i]]+extract_url_descr[i];
-	//		std::cout << "check folder exist: " << check_folder_exist << std::endl;
 
 			// old/new file paths
 			std::string old_file_path = temp_files_path+filename_extraction(extract_PDF_urls[i], "/");
@@ -405,17 +445,20 @@ int main()
 			{
 				// create the folder and just copy the file into the folder (since it is the first file in this folder)
 				std::filesystem::create_directories(check_folder_exist);
+				insert_logfile(log_files_path+temp_insert_date_logfile, "create dir:", check_folder_exist);
 
 				// add the crawled date to the file name
 				new_file_path.insert(new_file_path.size()-4, temp_insert_date);
 
 				// move the file to its final destination
 				boost::filesystem::rename(old_file_path, new_file_path);
+				insert_logfile(log_files_path+temp_insert_date_logfile, "move file(new):", old_file_path+"|"+new_file_path);
 			}
 			else	// folder already exists -> check via crc32 checksum whether the file is new or not
 			{
 				// determine the crc32 checksum of the file which is being sorted into the folder
 				uint32_t crc32_checksum_temp_file = crc32(old_file_path);
+				insert_logfile(log_files_path+temp_insert_date_logfile, "crc32 of file:", old_file_path+"|"+std::to_string(crc32_checksum_temp_file));
 
 				// fetch the (names of the) files in the folder
 				std::string path = check_folder_exist;
@@ -442,6 +485,10 @@ int main()
 						{
 							std::cout << "deletion of file: " << old_file_path << " failed" << std::endl;
 						}
+						else	// deletion was successful -> create a log entry
+						{
+							insert_logfile(log_files_path+temp_insert_date_logfile, "delete file:", old_file_path.c_str());
+						}
 
 						break;
 					}
@@ -455,6 +502,7 @@ int main()
 
 					// move the file to its final destination
 					boost::filesystem::rename(old_file_path, new_file_path);
+					insert_logfile(log_files_path+temp_insert_date_logfile, "move file(exist):", old_file_path+"|"+new_file_path);
 				}
 			}
 		}
@@ -473,7 +521,6 @@ int main()
 	{
 		std::string check_file_path_a = entry.path().filename().string();
 
-		std::cout << "file unsorted: " << check_file_path_a << std::endl;
 		count_unsorted_files++;
 	}
 
@@ -482,10 +529,9 @@ int main()
 	{
 		std::cout << "a total of " << count_unsorted_files << " files were not sorted and remain in the directory " << temp_files_path << std::endl;
 	}
-*/
-	//////////////////////////////////
-	// 6. create a log of the crawl //
-	//////////////////////////////////
+
+	insert_logfile(log_files_path+temp_insert_date_logfile, "amount files in temp folder:", std::to_string(count_unsorted_files));
+ 	insert_logfile(log_files_path+temp_insert_date_logfile, "end");
 
 	return 0;
 }
