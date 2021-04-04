@@ -28,7 +28,7 @@ void insert_logfile(std::string path_to_logfile, std::string msg_log1, std::stri
 	logfile_ofstream << temp_insert_date_logfile;
 	std::cout << temp_insert_date_logfile;
 
-	int padLen = 40;	// whitespace padding of the string
+	unsigned int padLen = 40;	// whitespace padding of the string
 	if (msg_log1.size() > padLen)	// prevent an error when the logmsg1 is longer than the set paddin length
 	{
 		padLen = msg_log1.size();
@@ -62,7 +62,7 @@ size_t write_fetched_data(void* ptr, size_t size, size_t nmemb, void* data)
 // fetch the source code of a single page
 std::string fetch_source_single_page(std::string url_full)
 {
-	std::string useragent = "spiderpig";		// user agent string
+	std::string useragent = "https://github.com/clauskovacs/TU-Wien-curricula-archive";		// user agent string
 
 	CURL* ch_ = curl_easy_init();				// create a CURL handle
 	char error_buffer[CURL_ERROR_SIZE];
@@ -103,7 +103,7 @@ void fetch_PDF_from_URL(std::string fetch_pdf_url, std::string filename, std::st
 {
 	CURL* curl;
 	FILE* fp;
-	CURLcode res;
+	std::string useragent = "https://github.com/clauskovacs/TU-Wien-curricula-archive";		// user agent string
 
 	// define locations where to save the file temporarily
 	std::string outfilename = temp_files_path+filename;
@@ -117,7 +117,8 @@ void fetch_PDF_from_URL(std::string fetch_pdf_url, std::string filename, std::st
 		curl_easy_setopt(curl, CURLOPT_URL, fetch_pdf_url.c_str());
 		curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_file_data);
 		curl_easy_setopt(curl, CURLOPT_WRITEDATA, fp);
-		res = curl_easy_perform(curl);
+		curl_easy_setopt(curl, CURLOPT_USERAGENT, useragent.c_str());		// set user agent string
+		curl_easy_perform(curl);
 
 		// cleanup
 		curl_easy_cleanup(curl);
@@ -146,11 +147,8 @@ std::string filename_extraction(std::string process_string, std::string delimite
 // information is stored in the two std::vectors extracted_data1 and extracted_data2
 void extract_PDF_URL_and_descriptions(std::string result, std::vector<std::string>& fetched_URLs, std::vector<std::string>& fetched_URLs_descriptions, std::string logpath)
 {
-	// extract the links and descriptions of the PDFs
-	int shift_pos = 0;
-
 	// iterate the std::string and find the desired elements
-	for (int i = 0; i < result.length()-8; i++)
+	for (unsigned int i = 0; i < result.length()-8; i++)
 	{
 		// rolling comparison to find open '<a href="' tags
 		int ahref_compare = result.compare(i, 9, "<a href=\"");
@@ -177,7 +175,7 @@ void extract_PDF_URL_and_descriptions(std::string result, std::vector<std::strin
 					extract_URL.append(result.begin()+start_extract_pos_URL, result.begin()+i);
 
 					// check whether this entry is already in the std::vector (multiple links leading to the same PDF)
-					for (int j = 0; j < fetched_URLs.size(); j++)
+					for (unsigned int j = 0; j < fetched_URLs.size(); j++)
 					{
 
 						if (filename_extraction(fetched_URLs[j], "/") == filename_extraction(extract_URL, "/"))
@@ -195,6 +193,7 @@ void extract_PDF_URL_and_descriptions(std::string result, std::vector<std::strin
 				}
 				else if (i == result.length())	// error .. end of string while tag is open!
 				{
+					// TODO: just skip this element
 					std::cout << "error parsing the source code (wrong syntax at closing tag for PDF-extration)" << std::endl;
 					std::cout << "i = " << i << std::endl;
 					exit(1);
@@ -241,7 +240,8 @@ void extract_PDF_URL_and_descriptions(std::string result, std::vector<std::strin
 				}
 				else if (i == result.length())	// error .. end of string while tag is open!
 				{
-					std::cout << "error parsing the source code (wrong syntax at closing tag for description-extration)" << std::endl;
+					// TODO: just skip this element
+					std::cout << "error parsing the source code (wrong syntax of a closing tag for description-extration)" << std::endl;
 					std::cout << "i = " << i << std::endl;
 					exit(1);
 				}
@@ -289,6 +289,8 @@ uint32_t crc32(std::string file_read_open)
 		std::cout << "File read failed" << std::endl;
 		return 0;
 	}
+
+	return 0;
 }
 
 int main()
@@ -321,7 +323,7 @@ int main()
  	insert_logfile(log_files_path+temp_insert_date_logfile, "temp download folder: ", temp_files_path);
  	insert_logfile(log_files_path+temp_insert_date_logfile, "curricula folder: ", curricula_files_path);
 
-	for (int i = 0; i < search_str.size(); i++)
+	for (unsigned int i = 0; i < search_str.size(); i++)
 	{
 		insert_logfile(log_files_path+temp_insert_date_logfile, "searchstr: "+std::to_string(i), search_str[i]);
 	}
@@ -361,12 +363,12 @@ int main()
 	}
 
 	// extract additional information (BSc-, MSc-, expiring curriculum) -> iterate through each (found) element
-	for (int i = 0; i < extract_PDF_urls.size(); i++)
+	for (unsigned int i = 0; i < extract_PDF_urls.size(); i++)
 	{
 		bool found_element = false;
 
 		// determine which curricula is which (of type)
-		for (int j = 0; j < search_str.size(); j++)
+		for (unsigned int j = 0; j < search_str.size(); j++)
 		{
 			if (extract_PDF_urls[i].find(search_str[j]) != std::string::npos)
 			{
@@ -392,7 +394,7 @@ int main()
 
 	insert_logfile(log_files_path+temp_insert_date_logfile, "downloading PDFs");
 
-	for (int i = 0; i < extract_PDF_urls.size(); i++)
+	for (unsigned int i = 0; i < extract_PDF_urls.size(); i++)
 	{
 		// only parse desired links (ones of type PDF which were included in the search_str vector)
 		if (extract_url_info[i] > -1)
@@ -420,7 +422,7 @@ int main()
 	// go through each (temporarily) downloaded file: see if the file is already present in the downloaded folder or not
 
 	// loop through all found files
-	for (int i = 0; i < extract_PDF_urls.size(); i++)
+	for (unsigned int i = 0; i < extract_PDF_urls.size(); i++)
 	{
 		if (extract_url_info[i] > -1)
 		{
