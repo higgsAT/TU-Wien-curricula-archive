@@ -161,9 +161,9 @@ void extract_PDF_URL_and_descriptions(std::string result, std::vector<std::strin
 			int start_extract_pos_URL = i;	// cache the start position
 
 			// extract the link to the PDF
-			std::string extract_URL;	// stores the link to the PDF
+			std::string extract_URL;		// stores the link to the PDF
 
-			bool already_in_list = false;
+			bool already_in_list = false;	// prevent the same PDF being pushed multiple times into the std::vec (which would cause problems with further file processing)
 
 			while (close_URL == false)
 			{
