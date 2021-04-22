@@ -1,0 +1,313 @@
+2021-04-22 22:36:38 start                                   
+2021-04-22 22:36:38 TLD:                                    https://www.tuwien.at
+2021-04-22 22:36:38 crawled site:                           /tu-wien/organisation/zentrale-bereiche/studienabteilung/studienplaene
+2021-04-22 22:36:38 temp download folder:                   temp_downloads/
+2021-04-22 22:36:38 curricula folder:                       curricula/
+2021-04-22 22:36:38 searchstr: 0                            BSc
+2021-04-22 22:36:38 searchstr: 1                            MSc
+2021-04-22 22:36:38 searchstr: 2                            Doktor
+2021-04-22 22:36:38 searchstr: 3                            Erweiterungsstudium
+2021-04-22 22:36:38 searchstr: 4                            Gemeinsame_Studienprogramme
+2021-04-22 22:36:38 searchstr: 5                            Alte_Studienplaene
+2021-04-22 22:36:38 fetching page source                    
+2021-04-22 22:36:40 page crawling donw                      
+2021-04-22 22:36:40 parsing page source                     
+2021-04-22 22:36:40 cleanup extract_desc(&nbsp;):           Bauingenieurwesen&nbsp;
+2021-04-22 22:36:40 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2018/BachelorArchitektur.pdf|Architektur
+2021-04-22 22:36:40 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2019/Bachelorstudium_Bauingenieurwesen.pdf|Bauingenieurwesen
+2021-04-22 22:36:40 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2019/Bachelorstudium_GeodaesieundGeoinformation.pdf|Geodäsie und Geoinformation
+2021-04-22 22:36:40 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2018/BachelorElektrotechnikundInformationstechnik.pdf|Elektrotechnik und Informationstechnik
+2021-04-22 22:36:40 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2020/Bachelorstudium_Medieninformatik_Und_Visual_Computing_2020.pdf|Medieninformatik und Visual Computing
+2021-04-22 22:36:40 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2020/Bachelorstudium_Medizinische_Informatik_2020.pdf|Medizinische Informatik
+2021-04-22 22:36:40 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2020/Bachelorstudium_Software_And_Information_Engineering_2020.pdf|Software &amp; Information Engineering
+2021-04-22 22:36:40 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2020/Bachelorstudium_Technische_Informatik_2020.pdf|Technische Informatik
+2021-04-22 22:36:40 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2020/Bachelorstudium_Wirtschaftsinformatik_2020.pdf|Wirtschaftsinformatik
+2021-04-22 22:36:40 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2020/Bachelorstudium_Maschinenbau_2020.pdf|Maschinenbau 
+2021-04-22 22:36:40 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2020/Bachelorstudium_Wirtschaftsingenieurwesen_Maschinenbau_2020.pdf|Wirtschaftsingenieurwesen - Maschinenbau
+2021-04-22 22:36:40 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2017/BachelorstudiumRaumplanungundRaumordnungE033240.pdf|Raumplanung und Raumordnung
+2021-04-22 22:36:40 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2019/Bachelorstudium_Technische_Chemie.pdf|Technische Chemie
+2021-04-22 22:36:40 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2020/Bachelorstudium_Technische_Mathematik_2020.pdf|Technische Mathematik
+2021-04-22 22:36:40 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2020/Bachelorstudium_Statistik_und_Wirtschaftsmathematik_2020.pdf|Statistik und Wirtschaftsmathematik
+2021-04-22 22:36:40 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2020/Bachelorstudium_Finanz-und_Versicherungsmathematik_2020.pdf|Finanz- und Versicherungsmathematik
+2021-04-22 22:36:40 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2020/Bachelorstudium_Technische_Physik_2020.pdf|Technische Physik
+2021-04-22 22:36:40 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2018/2Bachelorstudium_Umweltingenieurwesen.pdf|Umweltingenieurwesen
+2021-04-22 22:36:40 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2017/BachelorstudiumVerfahrenstechnikE033273.pdf|Verfahrenstechnik
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Architektur_2020.pdf|Architektur
+2021-04-22 22:36:40 extracted file[5]:                      /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Masterstudium_Building_Science_and_Technology.pdf|Building Science &amp; Technologie
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Bauingenieurwissenschaften_2020.pdf|Bauingenieurwissenschaften
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Umweltingenieurwesen-1.pdf|Umweltingenieurwesen
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Biomedical_Engineering_2020.pdf|Biomedical Engineering
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Computational_Science_and_Engineering_2020.pdf|Computational Science and Engineering
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Embedded_Systems_2020.pdf|Embedded Systems
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2018/MasterEnergieundAutomatisierungstechnik.pdf|Energie- und Automatiesierungstechnik
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2019/Masterstudium_Telecommunications.pdf|Telecommunications 
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2019/Masterstudium_Mikroelektronik_und_Photonik.pdf|Mikroelektronik und Photonik
+2021-04-22 22:36:40 extracted file[5]:                      /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Master_Energietechnik.pdf|Computertechnik 
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Geodaesie_und_Geoinformation.pdf|Geodäsie und Geoinformation
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Logic_And_Computation_2020.pdf|Logic and Computation
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Visual_Computing_2020.pdf|Visual Computing
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Media_And_Human-Centered_Computing_2020.pdf|Media and Human-Centered Computing
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Medizinische_Informatik_2020.pdf|Medizinische Informatik
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Software_Engineering_And_Internet_Computing_2020.pdf|Software Engineering &amp; Internet Computing
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Technische_Informatik_2020.pdf|Technische Informatik
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Maschinenbau_2020.pdf|Maschinenbau
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_WirtschaftsingenieurwesenMaschinenbau_2020.pdf|Wirtschaftsingenieurwesen - Maschinenbau
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Materialwissenschaften_2020.pdf|Materialwissenschaften
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2018/MasterRaumplanungundRaumordnung.pdf|Raumplanung und Raumordnung
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Technische_Chemie_2020_ohne_Modulbeschreibungen.pdf|Technische Chemie
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Technische_Chemie_2020_Anhang_Modulbeschreibungen.pdf|Modulbeschreibung
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Technische_Mathematik_2020.pdf|Technische Mathematik
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Statistik-Wirtschaftsmathematik_2020.pdf|Statistik-Wirtschaftsmathematik
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Finanz-und_Versicherungsmathematik_2020.pdf|Finanz- und Versicherungsmathematik
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Technische_Physik_2020.pdf|Technische Physik
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Physikalische_Energie-und_Messtechnik_2020.pdf|Physikalische Energie- und Messtechnik
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2018/MasterVerfahrenstechnik.pdf|Verfahrenstechnik
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Business_Informatics_2020.pdf|Business Informatics
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Data_Science_2020.pdf|Data Science
+2021-04-22 22:36:40 extracted file[2]:                      /fileadmin/Assets/dienstleister/studienabteilung/Doktoratsstudium/Studienplan_Doktoratsstudium_Fassung_01-10-2013.pdf|Technische Wissenschaften
+2021-04-22 22:36:40 extracted file[3]:                      /fileadmin/Assets/dienstleister/studienabteilung/Erweiterungsstudien/Erweiterungsstudium_Innovation_2020.pdf|Innovation
+2021-04-22 22:36:40 extracted file[3]:                      /fileadmin/Assets/dienstleister/studienabteilung/Erweiterungsstudien/Erweiterungsstudium_Digitale_Kompetenzen.pdf|Digitale Kompetenz
+2021-04-22 22:36:40 extracted file[4]:                      /fileadmin/Assets/dienstleister/studienabteilung/Gemeinsame_Studienprogramme/Master_Infrastrukturmanagement.pdf|Masterstudium Infrastrukturmanagement
+2021-04-22 22:36:40 extracted file[5]:                      /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/StudienplanMasterChemieundTechnologiederMaterialien.pdf|Masterstudium Chemie und Technologie der Materialien
+2021-04-22 22:36:40 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Mathematical_Modelling_2020.pdf|Masterstudium Mathematical Modelling in Engineering: Theory numerics, applications
+2021-04-22 22:36:40 extracted file[4]:                      /fileadmin/Assets/dienstleister/studienabteilung/Gemeinsame_Studienprogramme/Masterstudium_Cartography.pdf|Internationales Masterstudium Cartography
+2021-04-22 22:36:40 extracted file[5]:                      /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Masterstudien_Bauingenieurwesen.pdf|Masterstudium Bauingenieurwesen - Konstruktiver Ingenieurbau
+2021-04-22 22:36:40 extracted file[5]:                      /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Bach_Data_Engineering.pdf|Bachelorstudium Data Engineering &amp; Statistics
+2021-04-22 22:36:40 extracted file[5]:                      /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Bach_und_Master_Informatik.pdf|Masterstudium Information &amp; Knowledge Management
+2021-04-22 22:36:40 extracted file[5]:                      /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Master_Informatikdidaktik.pdf|Masterstudium Informatikdidaktik
+2021-04-22 22:36:40 extracted file[5]:                      /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Bach_und_Master_Informatikmanagement.pdf|Bachelorstudium Informatikmanagement
+2021-04-22 22:36:40 extracted file[5]:                      /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Diplomstudium_Lehramt_gesamt.pdf|UF Mathematik
+2021-04-22 22:36:40 extracted file[5]:                      /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Master_TC_Synthese.pdf|Masterstudium Technische Chemie - Synthese
+2021-04-22 22:36:40 extracted file[5]:                      /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Master_TC_Werkstoff.pdf|Masterstudium Werkstofftechnologie und -analytik
+2021-04-22 22:36:40 extracted file[5]:                      /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Master_TC_Chemische_Prozesstechnik.pdf|Masterstudium technische Chemie - Chemische Prozesstechnik
+2021-04-22 22:36:40 extracted file[5]:                      /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Master_TC_Biotechnologie.pdf|Masterstudium Biotechnologie und Bianalytik
+2021-04-22 22:36:40 extracted file[5]:                      /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Bach_Mathematik.pdf|Bachelorstudium Mathematik in Technik und Naturwissenschaften
+2021-04-22 22:36:40 extracted file[5]:                      /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Master_Mathematik.pdf|Masterstudium Mathematik
+2021-04-22 22:36:40 extracted file[5]:                      /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Master_Vermessung.pdf|Masterstudium Vermessung und Katasterwesen
+2021-04-22 22:36:40 extracted file[5]:                      /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Bach_u_Master_Versicherungsmathematik.pdf|Bachelorstudium Versicherungsmathematik
+2021-04-22 22:36:40 parsing page done                       
+2021-04-22 22:36:40 downloading PDFs                        
+2021-04-22 22:36:40 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2018/BachelorArchitektur.pdf
+2021-04-22 22:36:41 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2019/Bachelorstudium_Bauingenieurwesen.pdf
+2021-04-22 22:36:42 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2019/Bachelorstudium_GeodaesieundGeoinformation.pdf
+2021-04-22 22:36:42 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2018/BachelorElektrotechnikundInformationstechnik.pdf
+2021-04-22 22:36:44 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2020/Bachelorstudium_Medieninformatik_Und_Visual_Computing_2020.pdf
+2021-04-22 22:36:47 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2020/Bachelorstudium_Medizinische_Informatik_2020.pdf
+2021-04-22 22:36:49 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2020/Bachelorstudium_Software_And_Information_Engineering_2020.pdf
+2021-04-22 22:36:50 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2020/Bachelorstudium_Technische_Informatik_2020.pdf
+2021-04-22 22:36:51 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2020/Bachelorstudium_Wirtschaftsinformatik_2020.pdf
+2021-04-22 22:36:52 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2020/Bachelorstudium_Maschinenbau_2020.pdf
+2021-04-22 22:36:53 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2020/Bachelorstudium_Wirtschaftsingenieurwesen_Maschinenbau_2020.pdf
+2021-04-22 22:36:58 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2017/BachelorstudiumRaumplanungundRaumordnungE033240.pdf
+2021-04-22 22:36:59 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2019/Bachelorstudium_Technische_Chemie.pdf
+2021-04-22 22:37:01 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2020/Bachelorstudium_Technische_Mathematik_2020.pdf
+2021-04-22 22:37:02 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2020/Bachelorstudium_Statistik_und_Wirtschaftsmathematik_2020.pdf
+2021-04-22 22:37:04 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2020/Bachelorstudium_Finanz-und_Versicherungsmathematik_2020.pdf
+2021-04-22 22:37:05 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2020/Bachelorstudium_Technische_Physik_2020.pdf
+2021-04-22 22:37:06 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2018/2Bachelorstudium_Umweltingenieurwesen.pdf
+2021-04-22 22:37:08 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2017/BachelorstudiumVerfahrenstechnikE033273.pdf
+2021-04-22 22:37:09 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Architektur_2020.pdf
+2021-04-22 22:37:13 downloading file[5]:                    /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Masterstudium_Building_Science_and_Technology.pdf
+2021-04-22 22:37:15 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Bauingenieurwissenschaften_2020.pdf
+2021-04-22 22:37:17 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Umweltingenieurwesen-1.pdf
+2021-04-22 22:37:17 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Biomedical_Engineering_2020.pdf
+2021-04-22 22:37:20 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Computational_Science_and_Engineering_2020.pdf
+2021-04-22 22:37:21 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Embedded_Systems_2020.pdf
+2021-04-22 22:37:25 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2018/MasterEnergieundAutomatisierungstechnik.pdf
+2021-04-22 22:37:29 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2019/Masterstudium_Telecommunications.pdf
+2021-04-22 22:37:33 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2019/Masterstudium_Mikroelektronik_und_Photonik.pdf
+2021-04-22 22:37:40 downloading file[5]:                    /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Master_Energietechnik.pdf
+2021-04-22 22:37:41 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Geodaesie_und_Geoinformation.pdf
+2021-04-22 22:38:30 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Logic_And_Computation_2020.pdf
+2021-04-22 22:38:30 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Visual_Computing_2020.pdf
+2021-04-22 22:38:31 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Media_And_Human-Centered_Computing_2020.pdf
+2021-04-22 22:38:33 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Medizinische_Informatik_2020.pdf
+2021-04-22 22:38:34 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Software_Engineering_And_Internet_Computing_2020.pdf
+2021-04-22 22:38:34 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Technische_Informatik_2020.pdf
+2021-04-22 22:38:35 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Maschinenbau_2020.pdf
+2021-04-22 22:38:41 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_WirtschaftsingenieurwesenMaschinenbau_2020.pdf
+2021-04-22 22:38:46 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Materialwissenschaften_2020.pdf
+2021-04-22 22:38:54 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2018/MasterRaumplanungundRaumordnung.pdf
+2021-04-22 22:38:56 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Technische_Chemie_2020_ohne_Modulbeschreibungen.pdf
+2021-04-22 22:38:59 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Technische_Chemie_2020_Anhang_Modulbeschreibungen.pdf
+2021-04-22 22:39:02 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Technische_Mathematik_2020.pdf
+2021-04-22 22:39:03 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Statistik-Wirtschaftsmathematik_2020.pdf
+2021-04-22 22:39:03 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Finanz-und_Versicherungsmathematik_2020.pdf
+2021-04-22 22:39:04 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Technische_Physik_2020.pdf
+2021-04-22 22:39:08 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Physikalische_Energie-und_Messtechnik_2020.pdf
+2021-04-22 22:39:15 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2018/MasterVerfahrenstechnik.pdf
+2021-04-22 22:39:16 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Business_Informatics_2020.pdf
+2021-04-22 22:39:17 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Data_Science_2020.pdf
+2021-04-22 22:39:18 downloading file[2]:                    /fileadmin/Assets/dienstleister/studienabteilung/Doktoratsstudium/Studienplan_Doktoratsstudium_Fassung_01-10-2013.pdf
+2021-04-22 22:39:19 downloading file[3]:                    /fileadmin/Assets/dienstleister/studienabteilung/Erweiterungsstudien/Erweiterungsstudium_Innovation_2020.pdf
+2021-04-22 22:39:20 downloading file[3]:                    /fileadmin/Assets/dienstleister/studienabteilung/Erweiterungsstudien/Erweiterungsstudium_Digitale_Kompetenzen.pdf
+2021-04-22 22:39:21 downloading file[4]:                    /fileadmin/Assets/dienstleister/studienabteilung/Gemeinsame_Studienprogramme/Master_Infrastrukturmanagement.pdf
+2021-04-22 22:39:22 downloading file[5]:                    /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/StudienplanMasterChemieundTechnologiederMaterialien.pdf
+2021-04-22 22:39:24 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Mathematical_Modelling_2020.pdf
+2021-04-22 22:39:25 downloading file[4]:                    /fileadmin/Assets/dienstleister/studienabteilung/Gemeinsame_Studienprogramme/Masterstudium_Cartography.pdf
+2021-04-22 22:39:26 downloading file[5]:                    /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Masterstudien_Bauingenieurwesen.pdf
+2021-04-22 22:39:27 downloading file[5]:                    /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Bach_Data_Engineering.pdf
+2021-04-22 22:39:29 downloading file[5]:                    /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Bach_und_Master_Informatik.pdf
+2021-04-22 22:39:31 downloading file[5]:                    /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Master_Informatikdidaktik.pdf
+2021-04-22 22:39:32 downloading file[5]:                    /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Bach_und_Master_Informatikmanagement.pdf
+2021-04-22 22:39:33 downloading file[5]:                    /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Diplomstudium_Lehramt_gesamt.pdf
+2021-04-22 22:39:39 downloading file[5]:                    /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Master_TC_Synthese.pdf
+2021-04-22 22:39:40 downloading file[5]:                    /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Master_TC_Werkstoff.pdf
+2021-04-22 22:39:40 downloading file[5]:                    /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Master_TC_Chemische_Prozesstechnik.pdf
+2021-04-22 22:39:41 downloading file[5]:                    /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Master_TC_Biotechnologie.pdf
+2021-04-22 22:39:41 downloading file[5]:                    /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Bach_Mathematik.pdf
+2021-04-22 22:39:43 downloading file[5]:                    /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Master_Mathematik.pdf
+2021-04-22 22:39:44 downloading file[5]:                    /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Master_Vermessung.pdf
+2021-04-22 22:39:45 downloading file[5]:                    /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Bach_u_Master_Versicherungsmathematik.pdf
+2021-04-22 22:39:48 downloading PDFs done                   
+2021-04-22 22:39:48 create dir:                             curricula/Bachelor/Architektur
+2021-04-22 22:39:48 move file(new):                         temp_downloads/BachelorArchitektur.pdf|curricula/Bachelor/Architektur/BachelorArchitektur (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Bachelor/Bauingenieurwesen
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Bachelorstudium_Bauingenieurwesen.pdf|curricula/Bachelor/Bauingenieurwesen/Bachelorstudium_Bauingenieurwesen (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Bachelor/Geodäsie und Geoinformation
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Bachelorstudium_GeodaesieundGeoinformation.pdf|curricula/Bachelor/Geodäsie und Geoinformation/Bachelorstudium_GeodaesieundGeoinformation (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Bachelor/Elektrotechnik und Informationstechnik
+2021-04-22 22:39:48 move file(new):                         temp_downloads/BachelorElektrotechnikundInformationstechnik.pdf|curricula/Bachelor/Elektrotechnik und Informationstechnik/BachelorElektrotechnikundInformationstechnik (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Bachelor/Medieninformatik und Visual Computing
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Bachelorstudium_Medieninformatik_Und_Visual_Computing_2020.pdf|curricula/Bachelor/Medieninformatik und Visual Computing/Bachelorstudium_Medieninformatik_Und_Visual_Computing_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Bachelor/Medizinische Informatik
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Bachelorstudium_Medizinische_Informatik_2020.pdf|curricula/Bachelor/Medizinische Informatik/Bachelorstudium_Medizinische_Informatik_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 cleanup extract_url_descr(amp;):        Software &amp; Information Engineering
+2021-04-22 22:39:48 create dir:                             curricula/Bachelor/Software & Information Engineering
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Bachelorstudium_Software_And_Information_Engineering_2020.pdf|curricula/Bachelor/Software & Information Engineering/Bachelorstudium_Software_And_Information_Engineering_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Bachelor/Technische Informatik
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Bachelorstudium_Technische_Informatik_2020.pdf|curricula/Bachelor/Technische Informatik/Bachelorstudium_Technische_Informatik_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Bachelor/Wirtschaftsinformatik
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Bachelorstudium_Wirtschaftsinformatik_2020.pdf|curricula/Bachelor/Wirtschaftsinformatik/Bachelorstudium_Wirtschaftsinformatik_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Bachelor/Maschinenbau 
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Bachelorstudium_Maschinenbau_2020.pdf|curricula/Bachelor/Maschinenbau /Bachelorstudium_Maschinenbau_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Bachelor/Wirtschaftsingenieurwesen - Maschinenbau
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Bachelorstudium_Wirtschaftsingenieurwesen_Maschinenbau_2020.pdf|curricula/Bachelor/Wirtschaftsingenieurwesen - Maschinenbau/Bachelorstudium_Wirtschaftsingenieurwesen_Maschinenbau_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Bachelor/Raumplanung und Raumordnung
+2021-04-22 22:39:48 move file(new):                         temp_downloads/BachelorstudiumRaumplanungundRaumordnungE033240.pdf|curricula/Bachelor/Raumplanung und Raumordnung/BachelorstudiumRaumplanungundRaumordnungE033240 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Bachelor/Technische Chemie
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Bachelorstudium_Technische_Chemie.pdf|curricula/Bachelor/Technische Chemie/Bachelorstudium_Technische_Chemie (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Bachelor/Technische Mathematik
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Bachelorstudium_Technische_Mathematik_2020.pdf|curricula/Bachelor/Technische Mathematik/Bachelorstudium_Technische_Mathematik_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Bachelor/Statistik und Wirtschaftsmathematik
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Bachelorstudium_Statistik_und_Wirtschaftsmathematik_2020.pdf|curricula/Bachelor/Statistik und Wirtschaftsmathematik/Bachelorstudium_Statistik_und_Wirtschaftsmathematik_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Bachelor/Finanz- und Versicherungsmathematik
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Bachelorstudium_Finanz-und_Versicherungsmathematik_2020.pdf|curricula/Bachelor/Finanz- und Versicherungsmathematik/Bachelorstudium_Finanz-und_Versicherungsmathematik_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Bachelor/Technische Physik
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Bachelorstudium_Technische_Physik_2020.pdf|curricula/Bachelor/Technische Physik/Bachelorstudium_Technische_Physik_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Bachelor/Umweltingenieurwesen
+2021-04-22 22:39:48 move file(new):                         temp_downloads/2Bachelorstudium_Umweltingenieurwesen.pdf|curricula/Bachelor/Umweltingenieurwesen/2Bachelorstudium_Umweltingenieurwesen (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Bachelor/Verfahrenstechnik
+2021-04-22 22:39:48 move file(new):                         temp_downloads/BachelorstudiumVerfahrenstechnikE033273.pdf|curricula/Bachelor/Verfahrenstechnik/BachelorstudiumVerfahrenstechnikE033273 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Master/Architektur
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudium_Architektur_2020.pdf|curricula/Master/Architektur/Masterstudium_Architektur_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 cleanup extract_url_descr(amp;):        Building Science &amp; Technologie
+2021-04-22 22:39:48 create dir:                             curricula/Alte Studienpläne/Building Science & Technologie
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudium_Building_Science_and_Technology.pdf|curricula/Alte Studienpläne/Building Science & Technologie/Masterstudium_Building_Science_and_Technology (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Master/Bauingenieurwissenschaften
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudium_Bauingenieurwissenschaften_2020.pdf|curricula/Master/Bauingenieurwissenschaften/Masterstudium_Bauingenieurwissenschaften_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Master/Umweltingenieurwesen
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudium_Umweltingenieurwesen-1.pdf|curricula/Master/Umweltingenieurwesen/Masterstudium_Umweltingenieurwesen-1 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Master/Biomedical Engineering
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudium_Biomedical_Engineering_2020.pdf|curricula/Master/Biomedical Engineering/Masterstudium_Biomedical_Engineering_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Master/Computational Science and Engineering
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudium_Computational_Science_and_Engineering_2020.pdf|curricula/Master/Computational Science and Engineering/Masterstudium_Computational_Science_and_Engineering_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Master/Embedded Systems
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudium_Embedded_Systems_2020.pdf|curricula/Master/Embedded Systems/Masterstudium_Embedded_Systems_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Master/Energie- und Automatiesierungstechnik
+2021-04-22 22:39:48 move file(new):                         temp_downloads/MasterEnergieundAutomatisierungstechnik.pdf|curricula/Master/Energie- und Automatiesierungstechnik/MasterEnergieundAutomatisierungstechnik (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Master/Telecommunications 
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudium_Telecommunications.pdf|curricula/Master/Telecommunications /Masterstudium_Telecommunications (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Master/Mikroelektronik und Photonik
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudium_Mikroelektronik_und_Photonik.pdf|curricula/Master/Mikroelektronik und Photonik/Masterstudium_Mikroelektronik_und_Photonik (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Alte Studienpläne/Computertechnik 
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Master_Energietechnik.pdf|curricula/Alte Studienpläne/Computertechnik /Master_Energietechnik (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Master/Geodäsie und Geoinformation
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudium_Geodaesie_und_Geoinformation.pdf|curricula/Master/Geodäsie und Geoinformation/Masterstudium_Geodaesie_und_Geoinformation (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Master/Logic and Computation
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudium_Logic_And_Computation_2020.pdf|curricula/Master/Logic and Computation/Masterstudium_Logic_And_Computation_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Master/Visual Computing
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudium_Visual_Computing_2020.pdf|curricula/Master/Visual Computing/Masterstudium_Visual_Computing_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Master/Media and Human-Centered Computing
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudium_Media_And_Human-Centered_Computing_2020.pdf|curricula/Master/Media and Human-Centered Computing/Masterstudium_Media_And_Human-Centered_Computing_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Master/Medizinische Informatik
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudium_Medizinische_Informatik_2020.pdf|curricula/Master/Medizinische Informatik/Masterstudium_Medizinische_Informatik_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 cleanup extract_url_descr(amp;):        Software Engineering &amp; Internet Computing
+2021-04-22 22:39:48 create dir:                             curricula/Master/Software Engineering & Internet Computing
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudium_Software_Engineering_And_Internet_Computing_2020.pdf|curricula/Master/Software Engineering & Internet Computing/Masterstudium_Software_Engineering_And_Internet_Computing_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Master/Technische Informatik
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudium_Technische_Informatik_2020.pdf|curricula/Master/Technische Informatik/Masterstudium_Technische_Informatik_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Master/Maschinenbau
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudium_Maschinenbau_2020.pdf|curricula/Master/Maschinenbau/Masterstudium_Maschinenbau_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Master/Wirtschaftsingenieurwesen - Maschinenbau
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudium_WirtschaftsingenieurwesenMaschinenbau_2020.pdf|curricula/Master/Wirtschaftsingenieurwesen - Maschinenbau/Masterstudium_WirtschaftsingenieurwesenMaschinenbau_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Master/Materialwissenschaften
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudium_Materialwissenschaften_2020.pdf|curricula/Master/Materialwissenschaften/Masterstudium_Materialwissenschaften_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Master/Raumplanung und Raumordnung
+2021-04-22 22:39:48 move file(new):                         temp_downloads/MasterRaumplanungundRaumordnung.pdf|curricula/Master/Raumplanung und Raumordnung/MasterRaumplanungundRaumordnung (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Master/Technische Chemie
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudium_Technische_Chemie_2020_ohne_Modulbeschreibungen.pdf|curricula/Master/Technische Chemie/Masterstudium_Technische_Chemie_2020_ohne_Modulbeschreibungen (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Master/Modulbeschreibung
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudium_Technische_Chemie_2020_Anhang_Modulbeschreibungen.pdf|curricula/Master/Modulbeschreibung/Masterstudium_Technische_Chemie_2020_Anhang_Modulbeschreibungen (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Master/Technische Mathematik
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudium_Technische_Mathematik_2020.pdf|curricula/Master/Technische Mathematik/Masterstudium_Technische_Mathematik_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Master/Statistik-Wirtschaftsmathematik
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudium_Statistik-Wirtschaftsmathematik_2020.pdf|curricula/Master/Statistik-Wirtschaftsmathematik/Masterstudium_Statistik-Wirtschaftsmathematik_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Master/Finanz- und Versicherungsmathematik
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudium_Finanz-und_Versicherungsmathematik_2020.pdf|curricula/Master/Finanz- und Versicherungsmathematik/Masterstudium_Finanz-und_Versicherungsmathematik_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Master/Technische Physik
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudium_Technische_Physik_2020.pdf|curricula/Master/Technische Physik/Masterstudium_Technische_Physik_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Master/Physikalische Energie- und Messtechnik
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudium_Physikalische_Energie-und_Messtechnik_2020.pdf|curricula/Master/Physikalische Energie- und Messtechnik/Masterstudium_Physikalische_Energie-und_Messtechnik_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Master/Verfahrenstechnik
+2021-04-22 22:39:48 move file(new):                         temp_downloads/MasterVerfahrenstechnik.pdf|curricula/Master/Verfahrenstechnik/MasterVerfahrenstechnik (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Master/Business Informatics
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudium_Business_Informatics_2020.pdf|curricula/Master/Business Informatics/Masterstudium_Business_Informatics_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Master/Data Science
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudium_Data_Science_2020.pdf|curricula/Master/Data Science/Masterstudium_Data_Science_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Doktor/Technische Wissenschaften
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Studienplan_Doktoratsstudium_Fassung_01-10-2013.pdf|curricula/Doktor/Technische Wissenschaften/Studienplan_Doktoratsstudium_Fassung_01-10-2013 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Erweiterungsstudium/Innovation
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Erweiterungsstudium_Innovation_2020.pdf|curricula/Erweiterungsstudium/Innovation/Erweiterungsstudium_Innovation_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Erweiterungsstudium/Digitale Kompetenz
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Erweiterungsstudium_Digitale_Kompetenzen.pdf|curricula/Erweiterungsstudium/Digitale Kompetenz/Erweiterungsstudium_Digitale_Kompetenzen (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Gemeinsame Studienprogramme/Masterstudium Infrastrukturmanagement
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Master_Infrastrukturmanagement.pdf|curricula/Gemeinsame Studienprogramme/Masterstudium Infrastrukturmanagement/Master_Infrastrukturmanagement (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Alte Studienpläne/Masterstudium Chemie und Technologie der Materialien
+2021-04-22 22:39:48 move file(new):                         temp_downloads/StudienplanMasterChemieundTechnologiederMaterialien.pdf|curricula/Alte Studienpläne/Masterstudium Chemie und Technologie der Materialien/StudienplanMasterChemieundTechnologiederMaterialien (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Master/Masterstudium Mathematical Modelling in Engineering: Theory numerics, applications
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudium_Mathematical_Modelling_2020.pdf|curricula/Master/Masterstudium Mathematical Modelling in Engineering: Theory numerics, applications/Masterstudium_Mathematical_Modelling_2020 (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Gemeinsame Studienprogramme/Internationales Masterstudium Cartography
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudium_Cartography.pdf|curricula/Gemeinsame Studienprogramme/Internationales Masterstudium Cartography/Masterstudium_Cartography (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Alte Studienpläne/Masterstudium Bauingenieurwesen - Konstruktiver Ingenieurbau
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Masterstudien_Bauingenieurwesen.pdf|curricula/Alte Studienpläne/Masterstudium Bauingenieurwesen - Konstruktiver Ingenieurbau/Masterstudien_Bauingenieurwesen (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 cleanup extract_url_descr(amp;):        Bachelorstudium Data Engineering &amp; Statistics
+2021-04-22 22:39:48 create dir:                             curricula/Alte Studienpläne/Bachelorstudium Data Engineering & Statistics
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Bach_Data_Engineering.pdf|curricula/Alte Studienpläne/Bachelorstudium Data Engineering & Statistics/Bach_Data_Engineering (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 cleanup extract_url_descr(amp;):        Masterstudium Information &amp; Knowledge Management
+2021-04-22 22:39:48 create dir:                             curricula/Alte Studienpläne/Masterstudium Information & Knowledge Management
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Bach_und_Master_Informatik.pdf|curricula/Alte Studienpläne/Masterstudium Information & Knowledge Management/Bach_und_Master_Informatik (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Alte Studienpläne/Masterstudium Informatikdidaktik
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Master_Informatikdidaktik.pdf|curricula/Alte Studienpläne/Masterstudium Informatikdidaktik/Master_Informatikdidaktik (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Alte Studienpläne/Bachelorstudium Informatikmanagement
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Bach_und_Master_Informatikmanagement.pdf|curricula/Alte Studienpläne/Bachelorstudium Informatikmanagement/Bach_und_Master_Informatikmanagement (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Alte Studienpläne/UF Mathematik
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Diplomstudium_Lehramt_gesamt.pdf|curricula/Alte Studienpläne/UF Mathematik/Diplomstudium_Lehramt_gesamt (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Alte Studienpläne/Masterstudium Technische Chemie - Synthese
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Master_TC_Synthese.pdf|curricula/Alte Studienpläne/Masterstudium Technische Chemie - Synthese/Master_TC_Synthese (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Alte Studienpläne/Masterstudium Werkstofftechnologie und -analytik
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Master_TC_Werkstoff.pdf|curricula/Alte Studienpläne/Masterstudium Werkstofftechnologie und -analytik/Master_TC_Werkstoff (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Alte Studienpläne/Masterstudium technische Chemie - Chemische Prozesstechnik
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Master_TC_Chemische_Prozesstechnik.pdf|curricula/Alte Studienpläne/Masterstudium technische Chemie - Chemische Prozesstechnik/Master_TC_Chemische_Prozesstechnik (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Alte Studienpläne/Masterstudium Biotechnologie und Bianalytik
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Master_TC_Biotechnologie.pdf|curricula/Alte Studienpläne/Masterstudium Biotechnologie und Bianalytik/Master_TC_Biotechnologie (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Alte Studienpläne/Bachelorstudium Mathematik in Technik und Naturwissenschaften
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Bach_Mathematik.pdf|curricula/Alte Studienpläne/Bachelorstudium Mathematik in Technik und Naturwissenschaften/Bach_Mathematik (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Alte Studienpläne/Masterstudium Mathematik
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Master_Mathematik.pdf|curricula/Alte Studienpläne/Masterstudium Mathematik/Master_Mathematik (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Alte Studienpläne/Masterstudium Vermessung und Katasterwesen
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Master_Vermessung.pdf|curricula/Alte Studienpläne/Masterstudium Vermessung und Katasterwesen/Master_Vermessung (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 create dir:                             curricula/Alte Studienpläne/Bachelorstudium Versicherungsmathematik
+2021-04-22 22:39:48 move file(new):                         temp_downloads/Bach_u_Master_Versicherungsmathematik.pdf|curricula/Alte Studienpläne/Bachelorstudium Versicherungsmathematik/Bach_u_Master_Versicherungsmathematik (2021-04-22 22:36:38).pdf
+2021-04-22 22:39:48 amount files in temp folder:            0
+2021-04-22 22:39:48 end                                     
