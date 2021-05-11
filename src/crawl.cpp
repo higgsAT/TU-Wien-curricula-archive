@@ -206,7 +206,7 @@ void extract_PDF_URL_and_descriptions(std::string result, std::vector<std::strin
 
 			// get the description of the URL (as viewed by the browser)
 			bool close_descr = false;
-			i += 1;						// increment variable i by 9 to set the position at the end of the opening bracket
+			i += 1;						// increment variable i by one to set the start position correctly
 			int start_extract_pos_desc = i;	// cache the start position
 
 			std::string extract_desc;	// description of the file
@@ -295,6 +295,11 @@ uint32_t crc32(std::string file_read_open)
 
 int main()
 {
+	// file counters for the processing of the files (used in the logfiles)
+	int total_amt_files_processed	= 0;	// total amount of files processed
+	int total_amt_files_added		= 0;	// amount of new files added to the archive
+	int total_amt_files_already_in	= 0;	// total number of files which are already in the archive
+
 	// the site one wants to crawl
 	std::string TLD						= "https://www.tuwien.at";													// top-level-domain
 	std::string page_to_crawl			= "/tu-wien/organisation/zentrale-bereiche/studienabteilung/studienplaene";	// the page which will be crawled
@@ -375,6 +380,10 @@ int main()
 				extract_url_info.push_back(j);
 				found_element = true;
 			 	insert_logfile(log_files_path+temp_insert_date_logfile, "extracted file["+std::to_string(j)+"]:", extract_PDF_urls[i]+"|"+extract_url_descr[i]);
+
+				// increment the number of total (extracted) files for the logfile
+				total_amt_files_processed ++;
+
 				break;
 			}
 		}
@@ -455,6 +464,9 @@ int main()
 				// move the file to its final destination
 				boost::filesystem::rename(old_file_path, new_file_path);
 				insert_logfile(log_files_path+temp_insert_date_logfile, "move file(new):", old_file_path+"|"+new_file_path);
+
+				// increase the amount of files added to the counter (logfile)
+				total_amt_files_added ++;
 			}
 			else	// folder already exists -> check via crc32 checksum whether the file is new or not
 			{
@@ -472,27 +484,34 @@ int main()
 					// fetch the name of the files in this folder and build the file path
 					std::string check_file_path = check_folder_exist+"/"+entry.path().filename().string();
 
-					// create the crc32 checksum for this file
-					uint32_t crc32_checksum_file_path = crc32(check_file_path);
-
-					if (crc32_checksum_file_path == crc32_checksum_temp_file)	// file already in the folder -> delete file in temp folder
+					// TODO: add the same routine (or (const auto & entry : std::filesystem::directory_iterator(path) ...) to subdirectories. Which means check check the files in the subfolders too
+					if (!std::filesystem::is_directory(check_file_path))	// don't process subdirectories
 					{
-						file_already_in_folder = true;
+						std::cout << check_file_path << "is a directory" << std::endl;
 
-						// remove this file in the temp folder
-						int remove_flag = std::remove(old_file_path.c_str());
+						// create the crc32 checksum for this file
+						uint32_t crc32_checksum_file_path = crc32(check_file_path);
 
-						// check for success of deletion
-						if (remove_flag != 0)
+						if (crc32_checksum_file_path == crc32_checksum_temp_file)	// file already in the folder -> delete file in temp folder
 						{
-							std::cout << "deletion of file: " << old_file_path << " failed" << std::endl;
-						}
-						else	// deletion was successful -> create a log entry
-						{
-							insert_logfile(log_files_path+temp_insert_date_logfile, "delete file:", old_file_path.c_str());
-						}
+							file_already_in_folder = true;
 
-						break;
+							// remove this file in the temp folder
+							int remove_flag = std::remove(old_file_path.c_str());
+							total_amt_files_already_in ++;
+
+							// check for success of deletion
+							if (remove_flag != 0)
+							{
+								std::cout << "deletion of file: " << old_file_path << " failed" << std::endl;
+							}
+							else	// deletion was successful -> create a log entry
+							{
+								insert_logfile(log_files_path+temp_insert_date_logfile, "delete file:", old_file_path.c_str());
+							}
+
+							break;
+						}
 					}
 				}
 
@@ -505,6 +524,9 @@ int main()
 					// move the file to its final destination
 					boost::filesystem::rename(old_file_path, new_file_path);
 					insert_logfile(log_files_path+temp_insert_date_logfile, "move file(exist):", old_file_path+"|"+new_file_path);
+
+					// increase the amount of files added to the counter (logfile)
+					total_amt_files_added ++;
 				}
 			}
 		}
@@ -532,7 +554,13 @@ int main()
 		std::cout << "a total of " << count_unsorted_files << " files were not sorted and remain in the directory " << temp_files_path << std::endl;
 	}
 
-	insert_logfile(log_files_path+temp_insert_date_logfile, "amount files in temp folder:", std::to_string(count_unsorted_files));
+	insert_logfile(log_files_path+temp_insert_date_logfile, "amount of files in temp folder:", std::to_string(count_unsorted_files));
+
+	// write info about the file processing into the logfile (amount of files processed, added, removed since they are already in the archive)
+	insert_logfile(log_files_path+temp_insert_date_logfile, "amount of files processed:", std::to_string(total_amt_files_processed));
+	insert_logfile(log_files_path+temp_insert_date_logfile, "amount of new files added:", std::to_string(total_amt_files_added));
+	insert_logfile(log_files_path+temp_insert_date_logfile, "amount of files already in the archive (CRC32 duplicates):", std::to_string(total_amt_files_already_in));
+
  	insert_logfile(log_files_path+temp_insert_date_logfile, "end");
 
 	return 0;
