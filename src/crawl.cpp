@@ -484,10 +484,9 @@ int main()
 					// fetch the name of the files in this folder and build the file path
 					std::string check_file_path = check_folder_exist+"/"+entry.path().filename().string();
 
-					// TODO: add the same routine (or (const auto & entry : std::filesystem::directory_iterator(path) ...) to subdirectories. Which means check check the files in the subfolders too
 					if (!std::filesystem::is_directory(check_file_path))	// don't process subdirectories
 					{
-						std::cout << check_file_path << "is a directory" << std::endl;
+						std::cout << check_file_path << "is a file" << std::endl;
 
 						// create the crc32 checksum for this file
 						uint32_t crc32_checksum_file_path = crc32(check_file_path);
@@ -512,6 +511,10 @@ int main()
 
 							break;
 						}
+					}
+					else	// TODO: parse the subdirectories (add the same routine "for (const auto & entry : std::filesystem::directory_iterator(path))" to subdirectories. Which means check check the files in the subfolders too.
+					{
+						std::cout << check_file_path << "is a (sub)directory" << std::endl;
 					}
 				}
 
