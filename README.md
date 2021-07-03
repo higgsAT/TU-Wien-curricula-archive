@@ -14,9 +14,10 @@ This project has the following folder structure
 ├── obj
 ├── src
 │   └── crawl.cpp
+├── systemd_startup_script
 └── temp_downloads
 ```
-Compilation steps are stored in *\build* and *\obj*. The program responsible for data extraction and processing is called *crawl.cpp*. The downloaded and sorted curricula are stored in *\curricula*. The folder *\temp_downloads* is used as an intermediate storage folder for the downloads and the folder *\logs* contains the runtime and processing logs which contain information about the program execution.
+Compilation steps are stored in *\build* and *\obj*. The program responsible for data extraction and processing is called *crawl.cpp*. The downloaded and sorted curricula are stored in *\curricula*. The folder *\temp_downloads* is used as an intermediate storage folder for the downloads and the folder *\logs* contains the runtime and processing logs which contain information about the program execution. The folder *\systemd_startup_script* contains a shell script with which the (compiled) program may be executed (e.g., on starting up).
 
 
 ## Workflow of the Program *crawl.cpp*
