@@ -1,0 +1,269 @@
+2021-09-18 22:20:15 start                                   
+2021-09-18 22:20:15 TLD:                                    https://www.tuwien.at
+2021-09-18 22:20:15 crawled site:                           /tu-wien/organisation/zentrale-bereiche/studienabteilung/studienplaene
+2021-09-18 22:20:15 temp download folder:                   /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/
+2021-09-18 22:20:15 curricula folder:                       /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/curricula/
+2021-09-18 22:20:15 searchstr: 0                            BSc
+2021-09-18 22:20:15 searchstr: 1                            MSc
+2021-09-18 22:20:15 searchstr: 2                            Doktor
+2021-09-18 22:20:15 searchstr: 3                            Erweiterungsstudium
+2021-09-18 22:20:15 searchstr: 4                            Gemeinsame_Studienprogramme
+2021-09-18 22:20:15 searchstr: 5                            Alte_Studienplaene
+2021-09-18 22:20:15 fetching page source                    
+2021-09-18 22:20:16 page crawling donw                      
+2021-09-18 22:20:16 parsing page source                     
+2021-09-18 22:20:16 cleanup extract_desc(&nbsp;):           Bauingenieurwesen&nbsp;
+2021-09-18 22:20:16 cleanup extract_desc(&nbsp;):           Technische Chemie&nbsp;
+2021-09-18 22:20:16 cleanup extract_desc(&nbsp;):           Finanz- und Versicherungsmathematik&nbsp;
+2021-09-18 22:20:16 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Architektur_2021__3_.pdf|Architektur
+2021-09-18 22:20:16 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Bauingenieurwesen_2021.pdf|Bauingenieurwesen
+2021-09-18 22:20:16 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Geodaesie_und_Geoinformation_2021.pdf|Geodäsie und Geoinformation
+2021-09-18 22:20:16 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2018/BachelorElektrotechnikundInformationstechnik.pdf|Elektrotechnik und Informationstechnik
+2021-09-18 22:20:16 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Medieninformatik_und_Visual_Computing_2021.pdf|Medieninformatik und Visual Computing
+2021-09-18 22:20:16 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Medizinische_Informatik_2021.pdf|Medizinische Informatik
+2021-09-18 22:20:16 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Software_and_Information_Engineering_2021.pdf|Software &amp; Information Engineering
+2021-09-18 22:20:16 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Technische_Informatik_2021.pdf|Technische Informatik
+2021-09-18 22:20:16 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Wirtschaftsinformatik_2021.pdf|Wirtschaftsinformatik
+2021-09-18 22:20:16 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Maschinenbau_2021.pdf|Maschinenbau
+2021-09-18 22:20:16 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Wirtschaftsingenieurwesen_Maschinenbau_2021.pdf|Wirtschaftsingenieurwesen - Maschinenbau
+2021-09-18 22:20:16 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Raumplanung_und_Raumordnung_2021.pdf|Raumplanung und Raumordnung
+2021-09-18 22:20:16 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Technische_Chemie_2021.pdf|Technische Chemie
+2021-09-18 22:20:16 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Technische_Mathematik_2021.pdf|Technische Mathematik
+2021-09-18 22:20:16 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Statistik_und_Wirtschaftsmathematik_2021.pdf|Statistik und Wirtschaftsmathematik
+2021-09-18 22:20:16 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Finanz-_und_Versicherungsmathematik_2021.pdf|Finanz- und Versicherungsmathematik
+2021-09-18 22:20:16 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Technische_Physik_2021.pdf|Technische Physik
+2021-09-18 22:20:16 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2018/2Bachelorstudium_Umweltingenieurwesen.pdf|Umweltingenieurwesen
+2021-09-18 22:20:16 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Verfahrenstechnik_2021.pdf|Verfahrenstechnik
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Architektur_2021.pdf|Architektur
+2021-09-18 22:20:16 extracted file[5]:                      /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Masterstudium_Building_Science_and_Technology.pdf|Building Science &amp; Technologie
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Bauingenieurwissenschaften_2021.pdf|Bauingenieurwissenschaften
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Biomedical_Engineering_2021.pdf|Biomedical Engineering
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Computational_Science_and_Engineering_2021.pdf|Computational Science and Engineering
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Embedded_Systems_2021.pdf|Embedded Systems
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Energie_und_Automatisierungstechnik_2021.pdf|Energie- und Automatisierungstechnik
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Telecommunications_2021.pdf|Telecommunications 
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Mikroelektronik_und_Photonik_2021.pdf|Mikroelektronik und Photonik
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Geodaesie_Und_Geoinformation_2021.pdf|Geodäsie und Geoinformation
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Logic_and_Computation_2021.pdf|Logic and Computation
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Visual_Computing_2021.pdf|Visual Computing
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Media_and_Human-Centered_Computing_2021.pdf|Media and Human-Centered Computing
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Medizinische_Informatik_2021.pdf|Medizinische Informatik
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Software_Engineering_and_Internet_Computing_2021.pdf|Software Engineering &amp; Internet Computing
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Technische_Informatik_2021.pdf|Technische Informatik
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Maschinenbau_2021.pdf|Maschinenbau
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_WirtschaftsingenieurwesenMaschinenbau_2021.pdf|Wirtschaftsingenieurwesen - Maschinenbau
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Materialwissenschaften_2020.pdf|Materialwissenschaften
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Raumplanung_und_Raumordnung_2021.pdf|Raumplanung und Raumordnung
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Technische_Chemie_2021.pdf|Technische Chemie
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Technische_Chemie_2020_Anhang_Modulbeschreibungen.pdf|Modulbeschreibung
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Technische_Mathematik_2021.pdf|Technische Mathematik
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Statistik-Wirtschaftsmathematik_2021.pdf|Statistik-Wirtschaftsmathematik
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Finanz-_und_Versicherungsmathematik_2021.pdf|Finanz- und Versicherungsmathematik
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Technische_Physik_2021.pdf|Technische Physik
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Physikalische_Energie-und_Messtechnik_2021.pdf|Physikalische Energie- und Messtechnik
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Umweltingenieurwesen_2021.pdf|Umweltingenieurwesen
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Verfahrenstechnik_2021.pdf|Verfahrenstechnik
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Business_Informatics_2021.pdf|Business Informatics
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Data_Science_2021.pdf|Data Science
+2021-09-18 22:20:16 extracted file[2]:                      /fileadmin/Assets/dienstleister/studienabteilung/Doktoratsstudium/Studienplan_Doktoratsstudium_Fassung_01-10-2013.pdf|Technische Wissenschaften
+2021-09-18 22:20:16 extracted file[3]:                      /fileadmin/Assets/dienstleister/studienabteilung/Erweiterungsstudien/Erweiterungsstudium_Innovation_2020.pdf|Innovation
+2021-09-18 22:20:16 extracted file[3]:                      /fileadmin/Assets/dienstleister/studienabteilung/Erweiterungsstudien/Erweiterungsstudium_Digitale_Kompetenzen.pdf|Digitale Kompetenz
+2021-09-18 22:20:16 extracted file[4]:                      /fileadmin/Assets/dienstleister/studienabteilung/Gemeinsame_Studienprogramme/Master_Infrastrukturmanagement.pdf|Masterstudium Infrastrukturmanagement
+2021-09-18 22:20:16 extracted file[5]:                      /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/StudienplanMasterChemieundTechnologiederMaterialien.pdf|Masterstudium Chemie und Technologie der Materialien
+2021-09-18 22:20:16 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Interdisciplinary_Mathematics_20201130__1_.pdf|Masterstudium Interdisciplinary Mathematics
+2021-09-18 22:20:16 extracted file[4]:                      /fileadmin/Assets/dienstleister/studienabteilung/Gemeinsame_Studienprogramme/Masterstudium_Cartography.pdf|Internationales Masterstudium Cartography
+2021-09-18 22:20:16 extracted file[5]:                      /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Bach_Data_Engineering.pdf|Bachelorstudium Data Engineering &amp; Statistics
+2021-09-18 22:20:16 extracted file[5]:                      /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Master_Informatikdidaktik.pdf|Masterstudium Informatikdidaktik
+2021-09-18 22:20:16 extracted file[5]:                      /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Diplomstudium_Lehramt_gesamt.pdf|UF Mathematik
+2021-09-18 22:20:16 parsing page done                       
+2021-09-18 22:20:16 downloading PDFs                        
+2021-09-18 22:20:16 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Architektur_2021__3_.pdf
+2021-09-18 22:20:17 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Bauingenieurwesen_2021.pdf
+2021-09-18 22:20:17 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Geodaesie_und_Geoinformation_2021.pdf
+2021-09-18 22:20:18 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2018/BachelorElektrotechnikundInformationstechnik.pdf
+2021-09-18 22:20:18 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Medieninformatik_und_Visual_Computing_2021.pdf
+2021-09-18 22:20:19 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Medizinische_Informatik_2021.pdf
+2021-09-18 22:20:20 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Software_and_Information_Engineering_2021.pdf
+2021-09-18 22:20:21 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Technische_Informatik_2021.pdf
+2021-09-18 22:20:21 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Wirtschaftsinformatik_2021.pdf
+2021-09-18 22:20:22 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Maschinenbau_2021.pdf
+2021-09-18 22:20:23 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Wirtschaftsingenieurwesen_Maschinenbau_2021.pdf
+2021-09-18 22:20:23 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Raumplanung_und_Raumordnung_2021.pdf
+2021-09-18 22:20:24 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Technische_Chemie_2021.pdf
+2021-09-18 22:20:25 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Technische_Mathematik_2021.pdf
+2021-09-18 22:20:26 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Statistik_und_Wirtschaftsmathematik_2021.pdf
+2021-09-18 22:20:26 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Finanz-_und_Versicherungsmathematik_2021.pdf
+2021-09-18 22:20:27 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Technische_Physik_2021.pdf
+2021-09-18 22:20:28 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2018/2Bachelorstudium_Umweltingenieurwesen.pdf
+2021-09-18 22:20:29 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc_Studienplaene_2021/Bachelorstudium_Verfahrenstechnik_2021.pdf
+2021-09-18 22:20:29 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Architektur_2021.pdf
+2021-09-18 22:20:30 downloading file[5]:                    /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Masterstudium_Building_Science_and_Technology.pdf
+2021-09-18 22:20:32 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Bauingenieurwissenschaften_2021.pdf
+2021-09-18 22:20:33 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Biomedical_Engineering_2021.pdf
+2021-09-18 22:20:34 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Computational_Science_and_Engineering_2021.pdf
+2021-09-18 22:20:35 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Embedded_Systems_2021.pdf
+2021-09-18 22:20:42 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Energie_und_Automatisierungstechnik_2021.pdf
+2021-09-18 22:20:46 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Telecommunications_2021.pdf
+2021-09-18 22:20:51 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Mikroelektronik_und_Photonik_2021.pdf
+2021-09-18 22:20:56 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Geodaesie_Und_Geoinformation_2021.pdf
+2021-09-18 22:21:34 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Logic_and_Computation_2021.pdf
+2021-09-18 22:21:35 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Visual_Computing_2021.pdf
+2021-09-18 22:21:36 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Media_and_Human-Centered_Computing_2021.pdf
+2021-09-18 22:21:36 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Medizinische_Informatik_2021.pdf
+2021-09-18 22:21:37 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Software_Engineering_and_Internet_Computing_2021.pdf
+2021-09-18 22:21:38 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Technische_Informatik_2021.pdf
+2021-09-18 22:21:38 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Maschinenbau_2021.pdf
+2021-09-18 22:21:40 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_WirtschaftsingenieurwesenMaschinenbau_2021.pdf
+2021-09-18 22:21:43 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Materialwissenschaften_2020.pdf
+2021-09-18 22:21:47 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Raumplanung_und_Raumordnung_2021.pdf
+2021-09-18 22:21:48 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Technische_Chemie_2021.pdf
+2021-09-18 22:21:52 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2020/Masterstudium_Technische_Chemie_2020_Anhang_Modulbeschreibungen.pdf
+2021-09-18 22:21:53 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Technische_Mathematik_2021.pdf
+2021-09-18 22:21:54 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Statistik-Wirtschaftsmathematik_2021.pdf
+2021-09-18 22:21:55 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Finanz-_und_Versicherungsmathematik_2021.pdf
+2021-09-18 22:21:55 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Technische_Physik_2021.pdf
+2021-09-18 22:21:58 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Physikalische_Energie-und_Messtechnik_2021.pdf
+2021-09-18 22:22:01 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Umweltingenieurwesen_2021.pdf
+2021-09-18 22:22:01 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Verfahrenstechnik_2021.pdf
+2021-09-18 22:22:02 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Business_Informatics_2021.pdf
+2021-09-18 22:22:03 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Data_Science_2021.pdf
+2021-09-18 22:22:03 downloading file[2]:                    /fileadmin/Assets/dienstleister/studienabteilung/Doktoratsstudium/Studienplan_Doktoratsstudium_Fassung_01-10-2013.pdf
+2021-09-18 22:22:04 downloading file[3]:                    /fileadmin/Assets/dienstleister/studienabteilung/Erweiterungsstudien/Erweiterungsstudium_Innovation_2020.pdf
+2021-09-18 22:22:04 downloading file[3]:                    /fileadmin/Assets/dienstleister/studienabteilung/Erweiterungsstudien/Erweiterungsstudium_Digitale_Kompetenzen.pdf
+2021-09-18 22:22:05 downloading file[4]:                    /fileadmin/Assets/dienstleister/studienabteilung/Gemeinsame_Studienprogramme/Master_Infrastrukturmanagement.pdf
+2021-09-18 22:22:06 downloading file[5]:                    /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/StudienplanMasterChemieundTechnologiederMaterialien.pdf
+2021-09-18 22:22:07 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Interdisciplinary_Mathematics_20201130__1_.pdf
+2021-09-18 22:22:07 downloading file[4]:                    /fileadmin/Assets/dienstleister/studienabteilung/Gemeinsame_Studienprogramme/Masterstudium_Cartography.pdf
+2021-09-18 22:22:08 downloading file[5]:                    /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Bach_Data_Engineering.pdf
+2021-09-18 22:22:09 downloading file[5]:                    /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Master_Informatikdidaktik.pdf
+2021-09-18 22:22:10 downloading file[5]:                    /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Diplomstudium_Lehramt_gesamt.pdf
+2021-09-18 22:22:13 downloading PDFs done                   
+2021-09-18 22:22:13 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Architektur_2021__3_.pdf|2779503242
+2021-09-18 22:22:13 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Architektur_2021__3_.pdf
+2021-09-18 22:22:13 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Bauingenieurwesen_2021.pdf|669247908
+2021-09-18 22:22:13 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Bauingenieurwesen_2021.pdf
+2021-09-18 22:22:13 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Geodaesie_und_Geoinformation_2021.pdf|3343673225
+2021-09-18 22:22:13 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Geodaesie_und_Geoinformation_2021.pdf
+2021-09-18 22:22:13 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/BachelorElektrotechnikundInformationstechnik.pdf|3943287668
+2021-09-18 22:22:13 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/BachelorElektrotechnikundInformationstechnik.pdf
+2021-09-18 22:22:13 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Medieninformatik_und_Visual_Computing_2021.pdf|1562148188
+2021-09-18 22:22:13 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Medieninformatik_und_Visual_Computing_2021.pdf
+2021-09-18 22:22:13 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Medizinische_Informatik_2021.pdf|3227792229
+2021-09-18 22:22:13 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Medizinische_Informatik_2021.pdf
+2021-09-18 22:22:13 cleanup extract_url_descr(amp;):        Software &amp; Information Engineering
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Software_and_Information_Engineering_2021.pdf|1142715283
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Software_and_Information_Engineering_2021.pdf
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Technische_Informatik_2021.pdf|2102301041
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Technische_Informatik_2021.pdf
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Wirtschaftsinformatik_2021.pdf|3591782520
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Wirtschaftsinformatik_2021.pdf
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Maschinenbau_2021.pdf|1977590783
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Maschinenbau_2021.pdf
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Wirtschaftsingenieurwesen_Maschinenbau_2021.pdf|2417574802
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Wirtschaftsingenieurwesen_Maschinenbau_2021.pdf
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Raumplanung_und_Raumordnung_2021.pdf|4081939686
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Raumplanung_und_Raumordnung_2021.pdf
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Technische_Chemie_2021.pdf|2607394752
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Technische_Chemie_2021.pdf
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Technische_Mathematik_2021.pdf|2740693897
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Technische_Mathematik_2021.pdf
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Statistik_und_Wirtschaftsmathematik_2021.pdf|3762374183
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Statistik_und_Wirtschaftsmathematik_2021.pdf
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Finanz-_und_Versicherungsmathematik_2021.pdf|2813464022
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Finanz-_und_Versicherungsmathematik_2021.pdf
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Technische_Physik_2021.pdf|3706815114
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Technische_Physik_2021.pdf
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/2Bachelorstudium_Umweltingenieurwesen.pdf|2208205331
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/2Bachelorstudium_Umweltingenieurwesen.pdf
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Verfahrenstechnik_2021.pdf|4178284464
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Verfahrenstechnik_2021.pdf
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Architektur_2021.pdf|369125226
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Architektur_2021.pdf
+2021-09-18 22:22:14 cleanup extract_url_descr(amp;):        Building Science &amp; Technologie
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Building_Science_and_Technology.pdf|1797835267
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Building_Science_and_Technology.pdf
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Bauingenieurwissenschaften_2021.pdf|880808721
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Bauingenieurwissenschaften_2021.pdf
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Biomedical_Engineering_2021.pdf|3697675076
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Biomedical_Engineering_2021.pdf
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Computational_Science_and_Engineering_2021.pdf|3326697003
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Computational_Science_and_Engineering_2021.pdf
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Embedded_Systems_2021.pdf|2982824557
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Embedded_Systems_2021.pdf
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Energie_und_Automatisierungstechnik_2021.pdf|1376916067
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Energie_und_Automatisierungstechnik_2021.pdf
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Telecommunications_2021.pdf|4079673847
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Telecommunications_2021.pdf
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Mikroelektronik_und_Photonik_2021.pdf|2541241647
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Mikroelektronik_und_Photonik_2021.pdf
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Geodaesie_Und_Geoinformation_2021.pdf|3111077405
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Geodaesie_Und_Geoinformation_2021.pdf
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Logic_and_Computation_2021.pdf|2816340287
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Logic_and_Computation_2021.pdf
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Visual_Computing_2021.pdf|1987393862
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Visual_Computing_2021.pdf
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Media_and_Human-Centered_Computing_2021.pdf|4274083181
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Media_and_Human-Centered_Computing_2021.pdf
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Medizinische_Informatik_2021.pdf|2123714103
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Medizinische_Informatik_2021.pdf
+2021-09-18 22:22:14 cleanup extract_url_descr(amp;):        Software Engineering &amp; Internet Computing
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Software_Engineering_and_Internet_Computing_2021.pdf|1098285166
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Software_Engineering_and_Internet_Computing_2021.pdf
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Technische_Informatik_2021.pdf|4227595765
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Technische_Informatik_2021.pdf
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Maschinenbau_2021.pdf|2630912674
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Maschinenbau_2021.pdf
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_WirtschaftsingenieurwesenMaschinenbau_2021.pdf|944383598
+2021-09-18 22:22:14 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_WirtschaftsingenieurwesenMaschinenbau_2021.pdf
+2021-09-18 22:22:14 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Materialwissenschaften_2020.pdf|1607783952
+2021-09-18 22:22:15 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Materialwissenschaften_2020.pdf
+2021-09-18 22:22:15 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Raumplanung_und_Raumordnung_2021.pdf|207736161
+2021-09-18 22:22:15 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Raumplanung_und_Raumordnung_2021.pdf
+2021-09-18 22:22:15 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Technische_Chemie_2021.pdf|2306631005
+2021-09-18 22:22:15 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Technische_Chemie_2021.pdf
+2021-09-18 22:22:15 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Technische_Chemie_2020_Anhang_Modulbeschreibungen.pdf|3760196193
+2021-09-18 22:22:15 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Technische_Chemie_2020_Anhang_Modulbeschreibungen.pdf
+2021-09-18 22:22:15 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Technische_Mathematik_2021.pdf|495650341
+2021-09-18 22:22:15 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Technische_Mathematik_2021.pdf
+2021-09-18 22:22:15 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Statistik-Wirtschaftsmathematik_2021.pdf|984038207
+2021-09-18 22:22:15 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Statistik-Wirtschaftsmathematik_2021.pdf
+2021-09-18 22:22:15 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Finanz-_und_Versicherungsmathematik_2021.pdf|1879844403
+2021-09-18 22:22:15 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Finanz-_und_Versicherungsmathematik_2021.pdf
+2021-09-18 22:22:15 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Technische_Physik_2021.pdf|1580381419
+2021-09-18 22:22:15 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Technische_Physik_2021.pdf
+2021-09-18 22:22:15 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Physikalische_Energie-und_Messtechnik_2021.pdf|1845870277
+2021-09-18 22:22:15 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Physikalische_Energie-und_Messtechnik_2021.pdf
+2021-09-18 22:22:15 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Umweltingenieurwesen_2021.pdf|3062267705
+2021-09-18 22:22:15 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Umweltingenieurwesen_2021.pdf
+2021-09-18 22:22:15 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Verfahrenstechnik_2021.pdf|4255233564
+2021-09-18 22:22:15 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Verfahrenstechnik_2021.pdf
+2021-09-18 22:22:15 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Business_Informatics_2021.pdf|1815405389
+2021-09-18 22:22:15 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Business_Informatics_2021.pdf
+2021-09-18 22:22:15 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Data_Science_2021.pdf|2168880215
+2021-09-18 22:22:15 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Data_Science_2021.pdf
+2021-09-18 22:22:15 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Studienplan_Doktoratsstudium_Fassung_01-10-2013.pdf|2164759265
+2021-09-18 22:22:15 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Studienplan_Doktoratsstudium_Fassung_01-10-2013.pdf
+2021-09-18 22:22:15 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Erweiterungsstudium_Innovation_2020.pdf|2865179786
+2021-09-18 22:22:15 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Erweiterungsstudium_Innovation_2020.pdf
+2021-09-18 22:22:15 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Erweiterungsstudium_Digitale_Kompetenzen.pdf|853180914
+2021-09-18 22:22:15 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Erweiterungsstudium_Digitale_Kompetenzen.pdf
+2021-09-18 22:22:15 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Master_Infrastrukturmanagement.pdf|1809569198
+2021-09-18 22:22:15 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Master_Infrastrukturmanagement.pdf
+2021-09-18 22:22:15 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/StudienplanMasterChemieundTechnologiederMaterialien.pdf|270440677
+2021-09-18 22:22:15 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/StudienplanMasterChemieundTechnologiederMaterialien.pdf
+2021-09-18 22:22:15 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Interdisciplinary_Mathematics_20201130__1_.pdf|272908564
+2021-09-18 22:22:15 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Interdisciplinary_Mathematics_20201130__1_.pdf
+2021-09-18 22:22:15 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Cartography.pdf|2378471359
+2021-09-18 22:22:15 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Cartography.pdf
+2021-09-18 22:22:15 cleanup extract_url_descr(amp;):        Bachelorstudium Data Engineering &amp; Statistics
+2021-09-18 22:22:15 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bach_Data_Engineering.pdf|628910673
+2021-09-18 22:22:15 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Bach_Data_Engineering.pdf
+2021-09-18 22:22:15 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Master_Informatikdidaktik.pdf|259693448
+2021-09-18 22:22:15 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Master_Informatikdidaktik.pdf
+2021-09-18 22:22:15 crc32 of file:                          /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Diplomstudium_Lehramt_gesamt.pdf|2299897297
+2021-09-18 22:22:15 delete file:                            /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/Diplomstudium_Lehramt_gesamt.pdf
+2021-09-18 22:22:15 amount of files in temp folder:         0
+2021-09-18 22:22:15 amount of files processed:              60
+2021-09-18 22:22:15 amount of new files added:              0
+2021-09-18 22:22:15 amount of files already in the archive (CRC32 duplicates):60
+2021-09-18 22:22:15 end                                     
