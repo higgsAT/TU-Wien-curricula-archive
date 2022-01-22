@@ -38,7 +38,7 @@ Compilation steps are stored in *\build* and *\obj*. The program responsible for
 4. Process the temporarily downloaded files
 
     1. Cleanup the file paths (e.g. remove *amp;*)
-    2. Check if the folder where the file will be copied already exists
+    2. Check if the folder where the file will be copied to already exists
     
         1. If not, just create the folder and move the file into the newly created folder
         2. If the folder exists:
