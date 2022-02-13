@@ -1,0 +1,14 @@
+2022-01-12 22:07:30 start                                   
+2022-01-12 22:07:30 TLD:                                    https://www.tuwien.at
+2022-01-12 22:07:30 crawled site:                           /tu-wien/organisation/zentrale-bereiche/studienabteilung/studienplaene
+2022-01-12 22:07:30 temp download folder:                   /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/temp_downloads/
+2022-01-12 22:07:30 curricula folder:                       /home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/curricula/
+2022-01-12 22:07:30 searchstr: 0                            BSc
+2022-01-12 22:07:30 searchstr: 1                            MSc
+2022-01-12 22:07:30 searchstr: 2                            Doktor
+2022-01-12 22:07:30 searchstr: 3                            Erweiterungsstudium
+2022-01-12 22:07:30 searchstr: 4                            Gemeinsame_Studienprogramme
+2022-01-12 22:07:30 searchstr: 5                            Alte_Studienplaene
+2022-01-12 22:07:30 fetching page source                    
+2022-01-12 22:07:30 page crawling donw                      
+2022-01-12 22:07:30 parsing page source                     
