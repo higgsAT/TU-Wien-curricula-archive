@@ -13,7 +13,6 @@
 #include <cstdio>
 #include <iomanip>
 
-
 // function inserting the entries into the logfile
 void insert_logfile(std::string path_to_logfile, std::string msg_log1, std::string msg_log2 = "")
 {
@@ -78,6 +77,7 @@ std::string fetch_source_single_page(std::string url_full)
 
 	int id = 1;
 	curl_easy_setopt(ch_, CURLOPT_VERBOSE, id);							// 1 ... a lot of verbose informations
+
 	curl_easy_setopt(ch_, CURLOPT_URL, url_full.c_str());
 	curl_easy_setopt(ch_, CURLOPT_USERAGENT, useragent.c_str());		// set user agent string
 	curl_easy_setopt(ch_, CURLOPT_CONNECTTIMEOUT, 10);					// time(seconds) we want to be connected to the server
@@ -306,15 +306,16 @@ int main()
 	std::string page_to_crawl			= "/tu-wien/organisation/zentrale-bereiche/studienabteilung/studienplaene";	// the page which will be crawled
 
 	// file paths
-	std::string absolute_path 			= "/home/itsme/Desktop/git_repos/TU-Wien-curricula-archive/";	// absolute path prefix (to execute the program via /etc/rc.local
-	std::string temp_files_path			= absolute_path + "temp_downloads/";							// location where the temp downloaded files are stored
+	std::string absolute_path 			= "/mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/";	// absolute path prefix (to execute the program via /etc/rc.local
+	std::string temp_files_path		= absolute_path + "temp_downloads/";							// location where the temp downloaded files are stored
 	std::string curricula_files_path	= absolute_path + "curricula/";									// location where the downloaded curricula are stored
 	std::string log_files_path			= absolute_path + "logs/";										// location where the logs (info about the crawl) are stored
 
-	std::cout << temp_files_path << std::endl;
-
-// 	exit(1);
-
+	if (!std::filesystem::is_directory(temp_files_path))
+	{
+		std::cout << "path " << temp_files_path << " does not exist -> check set file paths" << std::endl;
+		exit(1);
+	}
 
 	// define the names of the folders where the curricula are stored to (corresponds to the numbering elements in the search_str std::vector)
 	std::vector<std::string> folder_name_structure{"Bachelor/", "Master/", "Doktor/", "Erweiterungsstudium/", "Gemeinsame Studienprogramme/", "Alte Studienpläne/"};
