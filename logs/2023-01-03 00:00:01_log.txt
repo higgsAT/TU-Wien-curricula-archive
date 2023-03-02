@@ -1,0 +1,282 @@
+2023-01-03 00:00:01 start                                   
+2023-01-03 00:00:01 TLD:                                    https://www.tuwien.at
+2023-01-03 00:00:01 crawled site:                           /tu-wien/organisation/zentrale-bereiche/studienabteilung/studienplaene
+2023-01-03 00:00:01 temp download folder:                   /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/
+2023-01-03 00:00:01 curricula folder:                       /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/curricula/
+2023-01-03 00:00:01 searchstr: 0                            BSc
+2023-01-03 00:00:01 searchstr: 1                            MSc
+2023-01-03 00:00:01 searchstr: 2                            Doktor
+2023-01-03 00:00:01 searchstr: 3                            Erweiterungsstudium
+2023-01-03 00:00:01 searchstr: 4                            Gemeinsame_Studienprogramme
+2023-01-03 00:00:01 searchstr: 5                            Alte_Studienplaene
+2023-01-03 00:00:01 fetching page source                    
+2023-01-03 00:00:04 page crawling donw                      
+2023-01-03 00:00:04 parsing page source                     
+2023-01-03 00:00:04 cleanup extract_desc(&nbsp;):           Bauingenieurwesen&nbsp;
+2023-01-03 00:00:04 cleanup extract_desc(&nbsp;):           Technische Chemie&nbsp;
+2023-01-03 00:00:04 cleanup extract_desc(&nbsp;):           Finanz- und Versicherungsmathematik&nbsp;
+2023-01-03 00:00:04 cleanup extract_desc(&nbsp;):           Verfahrenstechnik&nbsp;und nachhaltige Produktion
+2023-01-03 00:00:04 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Architektur_2022.pdf|Architektur
+2023-01-03 00:00:04 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Bauingenieurwesen_2022.pdf|Bauingenieurwesen
+2023-01-03 00:00:04 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Geodaesie_und_Geoinformation_2022.pdf|Geodäsie und Geoinformation
+2023-01-03 00:00:04 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Elektrotechnik_und_Informationstechnik_2022.pdf|Elektrotechnik und Informationstechnik
+2023-01-03 00:00:04 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Medieninformatik_und_Visual_Computing_2022.pdf|Medieninformatik und Visual Computing
+2023-01-03 00:00:04 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Medizinische_Informatik_2022.pdf|Medizinische Informatik
+2023-01-03 00:00:04 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Software_and_Information_Engineering_2022.pdf|Software &amp; Information Engineering
+2023-01-03 00:00:04 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Technische_Informatik_2022.pdf|Technische Informatik
+2023-01-03 00:00:04 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Wirtschaftsinformatik_2022.pdf|Wirtschaftsinformatik
+2023-01-03 00:00:04 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Maschinenbau_2022.pdf|Maschinenbau
+2023-01-03 00:00:04 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Wirtschaftsingenieurwesen_Maschinenbau_2022.pdf|Wirtschaftsingenieurwesen - Maschinenbau
+2023-01-03 00:00:04 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Raumplanung_und_Raumordnung_2022.pdf|Raumplanung und Raumordnung
+2023-01-03 00:00:04 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Technische_Chemie_2022.pdf|Technische Chemie
+2023-01-03 00:00:04 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Technische_Mathematik_2022.pdf|Technische Mathematik
+2023-01-03 00:00:04 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Statistik_und_Wirtschaftsmathematik_2022.pdf|Statistik und Wirtschaftsmathematik
+2023-01-03 00:00:04 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Finanz-_und_Versicherungsmathematik_2022.pdf|Finanz- und Versicherungsmathematik
+2023-01-03 00:00:04 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Technische_Physik_2022.pdf|Technische Physik
+2023-01-03 00:00:04 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Umweltingenieurwesen_2022.pdf|Umweltingenieurwesen
+2023-01-03 00:00:04 extracted file[0]:                      /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Verfahrenstechnik_2022.pdf|Verfahrenstechnik
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Architektur_2022.pdf|Architektur
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Building_Sciences_and_Environment.pdf|Building Science &amp; Enviroment
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Bauingenieurwissenschaften_2022.pdf|Bauingenieurwissenschaften
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Biomedical_Engineering_2022.pdf|Biomedical Engineering
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Computational_Science_and_Engineering_2022.pdf|Computational Science and Engineering
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Elektrische_Energietechnik_und_nachhaltige_Energiesysteme_2022.pdf|Elektrische Energietechnik und nachhaltige Energiesysteme
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Embedded_Systems_2022.pdf|Embedded Systems
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Telecommunications_2022.pdf|Telecommunications 
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Mikroelektronik_und_Photonik_2022.pdf|Mikroelektronik und Photonik
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Automatisierung_und_Robotische_Systeme_2022.pdf|Automatisierung und robotische Systeme
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Geodaesie_Und_Geoinformation_2022.pdf|Geodäsie und Geoinformation
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Logic_and_Computation_2022.pdf|Logic and Computation
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Visual_Computing_2022.pdf|Visual Computing
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Media_and_Human-Centered_Computing_2022.pdf|Media and Human-Centered Computing
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Medizinische_Informatik_2022.pdf|Medizinische Informatik
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Software_Engineering_and_Internet_Computing_2022.pdf|Software Engineering &amp; Internet Computing
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Technische_Informatik_2022.pdf|Technische Informatik
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Maschinenbau_2022.pdf|Maschinenbau
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Wirtschaftsingenieurwesen-Maschinenbau_2022.pdf|Wirtschaftsingenieurwesen - Maschinenbau
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Manufacturing_and_Robotics_2022.pdf|Manufacturing and Robotics
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Materialwissenschaften_2022.pdf|Materialwissenschaften
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Raumplanung_und_Raumordnung_2022.pdf|Raumplanung und Raumordnung
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Technische_Chemie_2022.pdf|Technische Chemie
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Technische_Mathematik_2022.pdf|Technische Mathematik
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Statistik-Wirtschaftsmathematik_2022.pdf|Statistik-Wirtschaftsmathematik
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Finanz-_und_Versicherungsmathematik_2022.pdf|Finanz- und Versicherungsmathematik
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Technische_Physik_2022.pdf|Technische Physik
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Physikalische_Energie-und_Messtechnik_2022.pdf|Physikalische Energie- und Messtechnik
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Umweltingenieurwesen_2022.pdf|Umweltingenieurwesen
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Verfahrenstechnik_und_nachhaltige_Produktion_2022.pdf|Verfahrenstechnikund nachhaltige Produktion
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Business_Informatics_2022.pdf|Business Informatics
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Data_Science_2022.pdf|Data Science
+2023-01-03 00:00:04 extracted file[4]:                      /fileadmin/Assets/dienstleister/studienabteilung/Gemeinsame_Studienprogramme/Master_Infrastrukturmanagement.pdf|Masterstudium Infrastrukturmanagement
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Chemie_und_Technologie_der_Materialien.pdf|Masterstudium Chemie und Technologie der Materialien
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Green_Chemistry_2021_11_24__2_.pdf|Masterstudium Green Chemistry
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Interdisciplinary_Mathemeatics_2022.pdf|Masterstudium Interdisciplinary Mathematics
+2023-01-03 00:00:04 extracted file[4]:                      /fileadmin/Assets/dienstleister/studienabteilung/Gemeinsame_Studienprogramme/Masterstudium_Cartography.pdf|Internationales Masterstudium Cartography
+2023-01-03 00:00:04 extracted file[2]:                      /fileadmin/Assets/dienstleister/studienabteilung/Doktoratsstudium/Studienplan_Doktoratsstudium_Fassung_01-10-2013.pdf|Technische Wissenschaften
+2023-01-03 00:00:04 extracted file[3]:                      /fileadmin/Assets/dienstleister/studienabteilung/Erweiterungsstudien/Erweiterungsstudium_Innovation_2020.pdf|Innovation
+2023-01-03 00:00:04 extracted file[3]:                      /fileadmin/Assets/dienstleister/studienabteilung/Erweiterungsstudien/Erweiterungsstudium_Digitale_Kompetenzen.pdf|Digitale Kompetenz
+2023-01-03 00:00:04 extracted file[1]:                      /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Energie_und_Automatisierungstechnik_2021.pdf|Energie- und Automatisierungstechnik
+2023-01-03 00:00:04 extracted file[5]:                      /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Bach_Data_Engineering.pdf|Bachelorstudium Data Engineering &amp; Statistics
+2023-01-03 00:00:04 extracted file[5]:                      /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Master_Informatikdidaktik.pdf|Masterstudium Informatikdidaktik
+2023-01-03 00:00:04 extracted file[5]:                      /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Diplomstudium_Lehramt_gesamt.pdf|UF Mathematik
+2023-01-03 00:00:04 parsing page done                       
+2023-01-03 00:00:04 downloading PDFs                        
+2023-01-03 00:00:04 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Architektur_2022.pdf
+2023-01-03 00:00:05 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Bauingenieurwesen_2022.pdf
+2023-01-03 00:00:06 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Geodaesie_und_Geoinformation_2022.pdf
+2023-01-03 00:00:07 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Elektrotechnik_und_Informationstechnik_2022.pdf
+2023-01-03 00:00:08 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Medieninformatik_und_Visual_Computing_2022.pdf
+2023-01-03 00:00:08 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Medizinische_Informatik_2022.pdf
+2023-01-03 00:00:09 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Software_and_Information_Engineering_2022.pdf
+2023-01-03 00:00:10 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Technische_Informatik_2022.pdf
+2023-01-03 00:00:11 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Wirtschaftsinformatik_2022.pdf
+2023-01-03 00:00:12 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Maschinenbau_2022.pdf
+2023-01-03 00:00:13 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Wirtschaftsingenieurwesen_Maschinenbau_2022.pdf
+2023-01-03 00:00:14 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Raumplanung_und_Raumordnung_2022.pdf
+2023-01-03 00:00:15 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Technische_Chemie_2022.pdf
+2023-01-03 00:00:16 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Technische_Mathematik_2022.pdf
+2023-01-03 00:00:17 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Statistik_und_Wirtschaftsmathematik_2022.pdf
+2023-01-03 00:00:18 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Finanz-_und_Versicherungsmathematik_2022.pdf
+2023-01-03 00:00:20 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Technische_Physik_2022.pdf
+2023-01-03 00:00:21 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Umweltingenieurwesen_2022.pdf
+2023-01-03 00:00:22 downloading file[0]:                    /fileadmin/Assets/dienstleister/studienabteilung/BSc-Studienplaene_2022/Bachelorstudium_Verfahrenstechnik_2022.pdf
+2023-01-03 00:00:24 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Architektur_2022.pdf
+2023-01-03 00:00:25 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Building_Sciences_and_Environment.pdf
+2023-01-03 00:00:26 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Bauingenieurwissenschaften_2022.pdf
+2023-01-03 00:00:28 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Biomedical_Engineering_2022.pdf
+2023-01-03 00:00:30 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Computational_Science_and_Engineering_2022.pdf
+2023-01-03 00:00:31 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Elektrische_Energietechnik_und_nachhaltige_Energiesysteme_2022.pdf
+2023-01-03 00:00:32 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Embedded_Systems_2022.pdf
+2023-01-03 00:00:34 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Telecommunications_2022.pdf
+2023-01-03 00:00:36 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Mikroelektronik_und_Photonik_2022.pdf
+2023-01-03 00:00:37 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Automatisierung_und_Robotische_Systeme_2022.pdf
+2023-01-03 00:00:38 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Geodaesie_Und_Geoinformation_2022.pdf
+2023-01-03 00:00:39 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Logic_and_Computation_2022.pdf
+2023-01-03 00:00:41 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Visual_Computing_2022.pdf
+2023-01-03 00:00:42 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Media_and_Human-Centered_Computing_2022.pdf
+2023-01-03 00:00:43 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Medizinische_Informatik_2022.pdf
+2023-01-03 00:00:44 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Software_Engineering_and_Internet_Computing_2022.pdf
+2023-01-03 00:00:45 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Technische_Informatik_2022.pdf
+2023-01-03 00:00:47 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Maschinenbau_2022.pdf
+2023-01-03 00:00:49 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Wirtschaftsingenieurwesen-Maschinenbau_2022.pdf
+2023-01-03 00:00:51 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Manufacturing_and_Robotics_2022.pdf
+2023-01-03 00:00:52 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Materialwissenschaften_2022.pdf
+2023-01-03 00:00:53 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Raumplanung_und_Raumordnung_2022.pdf
+2023-01-03 00:00:54 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Technische_Chemie_2022.pdf
+2023-01-03 00:00:56 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Technische_Mathematik_2022.pdf
+2023-01-03 00:00:57 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Statistik-Wirtschaftsmathematik_2022.pdf
+2023-01-03 00:00:58 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Finanz-_und_Versicherungsmathematik_2022.pdf
+2023-01-03 00:01:00 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Technische_Physik_2022.pdf
+2023-01-03 00:01:01 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Physikalische_Energie-und_Messtechnik_2022.pdf
+2023-01-03 00:01:02 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Umweltingenieurwesen_2022.pdf
+2023-01-03 00:01:03 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Verfahrenstechnik_und_nachhaltige_Produktion_2022.pdf
+2023-01-03 00:01:04 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Business_Informatics_2022.pdf
+2023-01-03 00:01:06 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Data_Science_2022.pdf
+2023-01-03 00:01:07 downloading file[4]:                    /fileadmin/Assets/dienstleister/studienabteilung/Gemeinsame_Studienprogramme/Master_Infrastrukturmanagement.pdf
+2023-01-03 00:01:08 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Chemie_und_Technologie_der_Materialien.pdf
+2023-01-03 00:01:10 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Green_Chemistry_2021_11_24__2_.pdf
+2023-01-03 00:01:12 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2022/Masterstudium_Interdisciplinary_Mathemeatics_2022.pdf
+2023-01-03 00:01:13 downloading file[4]:                    /fileadmin/Assets/dienstleister/studienabteilung/Gemeinsame_Studienprogramme/Masterstudium_Cartography.pdf
+2023-01-03 00:01:15 downloading file[2]:                    /fileadmin/Assets/dienstleister/studienabteilung/Doktoratsstudium/Studienplan_Doktoratsstudium_Fassung_01-10-2013.pdf
+2023-01-03 00:01:16 downloading file[3]:                    /fileadmin/Assets/dienstleister/studienabteilung/Erweiterungsstudien/Erweiterungsstudium_Innovation_2020.pdf
+2023-01-03 00:01:17 downloading file[3]:                    /fileadmin/Assets/dienstleister/studienabteilung/Erweiterungsstudien/Erweiterungsstudium_Digitale_Kompetenzen.pdf
+2023-01-03 00:01:18 downloading file[1]:                    /fileadmin/Assets/dienstleister/studienabteilung/MSc_Studienplaene_2021/Masterstudium_Energie_und_Automatisierungstechnik_2021.pdf
+2023-01-03 00:01:24 downloading file[5]:                    /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Bach_Data_Engineering.pdf
+2023-01-03 00:01:25 downloading file[5]:                    /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Master_Informatikdidaktik.pdf
+2023-01-03 00:01:26 downloading file[5]:                    /fileadmin/Assets/dienstleister/studienabteilung/Alte_Studienplaene/Diplomstudium_Lehramt_gesamt.pdf
+2023-01-03 00:01:29 downloading PDFs done                   
+2023-01-03 00:01:29 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Architektur_2022.pdf|3072792353
+2023-01-03 00:01:30 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Architektur_2022.pdf
+2023-01-03 00:01:30 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Bauingenieurwesen_2022.pdf|3364669742
+2023-01-03 00:01:30 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Bauingenieurwesen_2022.pdf
+2023-01-03 00:01:30 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Geodaesie_und_Geoinformation_2022.pdf|1339166484
+2023-01-03 00:01:30 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Geodaesie_und_Geoinformation_2022.pdf
+2023-01-03 00:01:30 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Elektrotechnik_und_Informationstechnik_2022.pdf|1295583202
+2023-01-03 00:01:30 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Elektrotechnik_und_Informationstechnik_2022.pdf
+2023-01-03 00:01:30 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Medieninformatik_und_Visual_Computing_2022.pdf|1295023989
+2023-01-03 00:01:30 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Medieninformatik_und_Visual_Computing_2022.pdf
+2023-01-03 00:01:30 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Medizinische_Informatik_2022.pdf|2553061621
+2023-01-03 00:01:30 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Medizinische_Informatik_2022.pdf
+2023-01-03 00:01:30 cleanup extract_url_descr(amp;):        Software &amp; Information Engineering
+2023-01-03 00:01:30 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Software_and_Information_Engineering_2022.pdf|3755911015
+2023-01-03 00:01:30 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Software_and_Information_Engineering_2022.pdf
+2023-01-03 00:01:30 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Technische_Informatik_2022.pdf|2968523526
+2023-01-03 00:01:30 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Technische_Informatik_2022.pdf
+2023-01-03 00:01:30 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Wirtschaftsinformatik_2022.pdf|260334718
+2023-01-03 00:01:30 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Wirtschaftsinformatik_2022.pdf
+2023-01-03 00:01:30 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Maschinenbau_2022.pdf|1948130559
+2023-01-03 00:01:30 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Maschinenbau_2022.pdf
+2023-01-03 00:01:30 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Wirtschaftsingenieurwesen_Maschinenbau_2022.pdf|557885858
+2023-01-03 00:01:30 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Wirtschaftsingenieurwesen_Maschinenbau_2022.pdf
+2023-01-03 00:01:30 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Raumplanung_und_Raumordnung_2022.pdf|533860092
+2023-01-03 00:01:30 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Raumplanung_und_Raumordnung_2022.pdf
+2023-01-03 00:01:30 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Technische_Chemie_2022.pdf|4273951698
+2023-01-03 00:01:30 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Technische_Chemie_2022.pdf
+2023-01-03 00:01:30 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Technische_Mathematik_2022.pdf|60909361
+2023-01-03 00:01:30 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Technische_Mathematik_2022.pdf
+2023-01-03 00:01:30 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Statistik_und_Wirtschaftsmathematik_2022.pdf|1154587491
+2023-01-03 00:01:31 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Statistik_und_Wirtschaftsmathematik_2022.pdf
+2023-01-03 00:01:31 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Finanz-_und_Versicherungsmathematik_2022.pdf|2624042645
+2023-01-03 00:01:31 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Finanz-_und_Versicherungsmathematik_2022.pdf
+2023-01-03 00:01:31 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Technische_Physik_2022.pdf|2130159820
+2023-01-03 00:01:31 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Technische_Physik_2022.pdf
+2023-01-03 00:01:31 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Umweltingenieurwesen_2022.pdf|2706049386
+2023-01-03 00:01:31 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Umweltingenieurwesen_2022.pdf
+2023-01-03 00:01:31 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Verfahrenstechnik_2022.pdf|1016258432
+2023-01-03 00:01:31 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bachelorstudium_Verfahrenstechnik_2022.pdf
+2023-01-03 00:01:31 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Architektur_2022.pdf|3639914358
+2023-01-03 00:01:31 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Architektur_2022.pdf
+2023-01-03 00:01:31 cleanup extract_url_descr(amp;):        Building Science &amp; Enviroment
+2023-01-03 00:01:31 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Building_Sciences_and_Environment.pdf|3251776275
+2023-01-03 00:01:31 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Building_Sciences_and_Environment.pdf
+2023-01-03 00:01:31 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Bauingenieurwissenschaften_2022.pdf|3551800043
+2023-01-03 00:01:31 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Bauingenieurwissenschaften_2022.pdf
+2023-01-03 00:01:31 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Biomedical_Engineering_2022.pdf|2734480664
+2023-01-03 00:01:31 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Biomedical_Engineering_2022.pdf
+2023-01-03 00:01:31 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Computational_Science_and_Engineering_2022.pdf|2223833249
+2023-01-03 00:01:31 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Computational_Science_and_Engineering_2022.pdf
+2023-01-03 00:01:31 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Elektrische_Energietechnik_und_nachhaltige_Energiesysteme_2022.pdf|3932331770
+2023-01-03 00:01:31 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Elektrische_Energietechnik_und_nachhaltige_Energiesysteme_2022.pdf
+2023-01-03 00:01:31 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Embedded_Systems_2022.pdf|3037130319
+2023-01-03 00:01:31 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Embedded_Systems_2022.pdf
+2023-01-03 00:01:31 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Telecommunications_2022.pdf|225815499
+2023-01-03 00:01:31 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Telecommunications_2022.pdf
+2023-01-03 00:01:31 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Mikroelektronik_und_Photonik_2022.pdf|657146313
+2023-01-03 00:01:31 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Mikroelektronik_und_Photonik_2022.pdf
+2023-01-03 00:01:31 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Automatisierung_und_Robotische_Systeme_2022.pdf|1943982895
+2023-01-03 00:01:31 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Automatisierung_und_Robotische_Systeme_2022.pdf
+2023-01-03 00:01:31 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Geodaesie_Und_Geoinformation_2022.pdf|765383167
+2023-01-03 00:01:34 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Geodaesie_Und_Geoinformation_2022.pdf
+2023-01-03 00:01:34 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Logic_and_Computation_2022.pdf|3347070416
+2023-01-03 00:01:34 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Logic_and_Computation_2022.pdf
+2023-01-03 00:01:34 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Visual_Computing_2022.pdf|2762231016
+2023-01-03 00:01:34 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Visual_Computing_2022.pdf
+2023-01-03 00:01:34 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Media_and_Human-Centered_Computing_2022.pdf|3709658123
+2023-01-03 00:01:34 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Media_and_Human-Centered_Computing_2022.pdf
+2023-01-03 00:01:34 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Medizinische_Informatik_2022.pdf|3820691357
+2023-01-03 00:01:34 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Medizinische_Informatik_2022.pdf
+2023-01-03 00:01:34 cleanup extract_url_descr(amp;):        Software Engineering &amp; Internet Computing
+2023-01-03 00:01:34 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Software_Engineering_and_Internet_Computing_2022.pdf|4202545931
+2023-01-03 00:01:34 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Software_Engineering_and_Internet_Computing_2022.pdf
+2023-01-03 00:01:34 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Technische_Informatik_2022.pdf|1061154953
+2023-01-03 00:01:34 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Technische_Informatik_2022.pdf
+2023-01-03 00:01:34 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Maschinenbau_2022.pdf|550542076
+2023-01-03 00:01:34 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Maschinenbau_2022.pdf
+2023-01-03 00:01:34 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Wirtschaftsingenieurwesen-Maschinenbau_2022.pdf|2395603906
+2023-01-03 00:01:34 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Wirtschaftsingenieurwesen-Maschinenbau_2022.pdf
+2023-01-03 00:01:34 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Manufacturing_and_Robotics_2022.pdf|1055933557
+2023-01-03 00:01:34 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Manufacturing_and_Robotics_2022.pdf
+2023-01-03 00:01:34 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Materialwissenschaften_2022.pdf|3524742137
+2023-01-03 00:01:34 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Materialwissenschaften_2022.pdf
+2023-01-03 00:01:34 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Raumplanung_und_Raumordnung_2022.pdf|699914752
+2023-01-03 00:01:34 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Raumplanung_und_Raumordnung_2022.pdf
+2023-01-03 00:01:34 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Technische_Chemie_2022.pdf|2171138411
+2023-01-03 00:01:34 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Technische_Chemie_2022.pdf
+2023-01-03 00:01:34 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Technische_Mathematik_2022.pdf|2349259546
+2023-01-03 00:01:34 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Technische_Mathematik_2022.pdf
+2023-01-03 00:01:34 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Statistik-Wirtschaftsmathematik_2022.pdf|3362945615
+2023-01-03 00:01:34 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Statistik-Wirtschaftsmathematik_2022.pdf
+2023-01-03 00:01:34 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Finanz-_und_Versicherungsmathematik_2022.pdf|1744018968
+2023-01-03 00:01:34 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Finanz-_und_Versicherungsmathematik_2022.pdf
+2023-01-03 00:01:35 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Technische_Physik_2022.pdf|1947390644
+2023-01-03 00:01:35 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Technische_Physik_2022.pdf
+2023-01-03 00:01:35 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Physikalische_Energie-und_Messtechnik_2022.pdf|1238747606
+2023-01-03 00:01:35 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Physikalische_Energie-und_Messtechnik_2022.pdf
+2023-01-03 00:01:35 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Umweltingenieurwesen_2022.pdf|3220263603
+2023-01-03 00:01:35 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Umweltingenieurwesen_2022.pdf
+2023-01-03 00:01:35 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Verfahrenstechnik_und_nachhaltige_Produktion_2022.pdf|3093138333
+2023-01-03 00:01:35 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Verfahrenstechnik_und_nachhaltige_Produktion_2022.pdf
+2023-01-03 00:01:35 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Business_Informatics_2022.pdf|2804606560
+2023-01-03 00:01:35 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Business_Informatics_2022.pdf
+2023-01-03 00:01:35 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Data_Science_2022.pdf|3344827025
+2023-01-03 00:01:35 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Data_Science_2022.pdf
+2023-01-03 00:01:35 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Master_Infrastrukturmanagement.pdf|1809569198
+2023-01-03 00:01:35 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Master_Infrastrukturmanagement.pdf
+2023-01-03 00:01:35 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Chemie_und_Technologie_der_Materialien.pdf|136764253
+2023-01-03 00:01:35 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Chemie_und_Technologie_der_Materialien.pdf
+2023-01-03 00:01:35 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Green_Chemistry_2021_11_24__2_.pdf|803257262
+2023-01-03 00:01:35 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Green_Chemistry_2021_11_24__2_.pdf
+2023-01-03 00:01:35 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Interdisciplinary_Mathemeatics_2022.pdf|1348280727
+2023-01-03 00:01:35 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Interdisciplinary_Mathemeatics_2022.pdf
+2023-01-03 00:01:35 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Cartography.pdf|2378471359
+2023-01-03 00:01:35 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Cartography.pdf
+2023-01-03 00:01:35 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Studienplan_Doktoratsstudium_Fassung_01-10-2013.pdf|2164759265
+2023-01-03 00:01:35 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Studienplan_Doktoratsstudium_Fassung_01-10-2013.pdf
+2023-01-03 00:01:35 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Erweiterungsstudium_Innovation_2020.pdf|2865179786
+2023-01-03 00:01:35 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Erweiterungsstudium_Innovation_2020.pdf
+2023-01-03 00:01:35 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Erweiterungsstudium_Digitale_Kompetenzen.pdf|853180914
+2023-01-03 00:01:35 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Erweiterungsstudium_Digitale_Kompetenzen.pdf
+2023-01-03 00:01:35 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Energie_und_Automatisierungstechnik_2021.pdf|1376916067
+2023-01-03 00:01:35 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Masterstudium_Energie_und_Automatisierungstechnik_2021.pdf
+2023-01-03 00:01:35 cleanup extract_url_descr(amp;):        Bachelorstudium Data Engineering &amp; Statistics
+2023-01-03 00:01:35 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bach_Data_Engineering.pdf|628910673
+2023-01-03 00:01:35 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Bach_Data_Engineering.pdf
+2023-01-03 00:01:35 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Master_Informatikdidaktik.pdf|259693448
+2023-01-03 00:01:35 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Master_Informatikdidaktik.pdf
+2023-01-03 00:01:35 crc32 of file:                          /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Diplomstudium_Lehramt_gesamt.pdf|2299897297
+2023-01-03 00:01:35 delete file:                            /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/Diplomstudium_Lehramt_gesamt.pdf
+2023-01-03 00:01:35 amount of files in temp folder:         0
+2023-01-03 00:01:35 amount of files processed:              63
+2023-01-03 00:01:35 amount of new files added:              0
+2023-01-03 00:01:35 amount of files already in the archive (CRC32 duplicates):63
+2023-01-03 00:01:35 end                                     
