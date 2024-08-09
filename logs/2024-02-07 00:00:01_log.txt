@@ -1,0 +1,22 @@
+2024-02-07 00:00:01 start                                   
+2024-02-07 00:00:01 TLD:                                    https://www.tuwien.at
+2024-02-07 00:00:01 crawled site:                           /tu-wien/organisation/zentrale-bereiche/studienabteilung/studienplaene
+2024-02-07 00:00:01 temp download folder:                   /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/temp_downloads/
+2024-02-07 00:00:01 curricula folder:                       /mnt/usb-SanDisk_Cruzer_Contour/git_repos/TU-Wien-curricula-archive/curricula/
+2024-02-07 00:00:01 searchstr: 0                            BSc
+2024-02-07 00:00:01 searchstr: 1                            MSc
+2024-02-07 00:00:01 searchstr: 2                            Doktor
+2024-02-07 00:00:01 searchstr: 3                            Erweiterungsstudium
+2024-02-07 00:00:01 searchstr: 4                            Gemeinsame_Studienprogramme
+2024-02-07 00:00:01 searchstr: 5                            Alte_Studienplaene
+2024-02-07 00:00:01 fetching page source                    
+2024-02-07 00:00:02 page crawling donw                      
+2024-02-07 00:00:02 parsing page source                     
+2024-02-07 00:00:02 parsing page done                       
+2024-02-07 00:00:02 downloading PDFs                        
+2024-02-07 00:00:02 downloading PDFs done                   
+2024-02-07 00:00:02 amount of files in temp folder:         0
+2024-02-07 00:00:02 amount of files processed:              0
+2024-02-07 00:00:02 amount of new files added:              0
+2024-02-07 00:00:02 amount of files already in the archive (CRC32 duplicates):0
+2024-02-07 00:00:02 end                                     
