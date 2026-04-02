@@ -13,6 +13,8 @@
 #include <cstdio>
 #include <iomanip>
 
+#include "../header/mail.hpp"
+
 // function inserting the entries into the logfile
 void insert_logfile(std::string path_to_logfile, std::string msg_log1, std::string msg_log2 = "")
 {
@@ -548,7 +550,6 @@ int main()
 	///////////////////////
 
 	// check whether the temp download folder is empty
-
 	int count_unsorted_files = 0;	// amount of files remaining in the temp download folder after running the program
 
 	// loop through all files found in the temp download folder
@@ -571,8 +572,15 @@ int main()
 	insert_logfile(log_files_path + temp_insert_date_logfile, "amount of files processed:", std::to_string(total_amt_files_processed));
 	insert_logfile(log_files_path + temp_insert_date_logfile, "amount of new files added:", std::to_string(total_amt_files_added));
 	insert_logfile(log_files_path + temp_insert_date_logfile, "amount of files already in the archive (CRC32 duplicates):", std::to_string(total_amt_files_already_in));
-
  	insert_logfile(log_files_path + temp_insert_date_logfile, "end");
+
+	// At least one new curricula extracted -> Send info mail to user
+	if (total_amt_files_added > 0) {
+		send_mail(
+			std::to_string(total_amt_files_added) + " new curricula(s) extracted!",
+			"Check > TU-Wien-curricula-archive"
+		);
+	}
 
 	return 0;
 }

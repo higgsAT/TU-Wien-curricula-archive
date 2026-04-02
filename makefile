@@ -1,20 +1,25 @@
 ############################################################
-CXX = g++
-CXXFLAGS = -g -Wall -Wextra -pedantic -lboost_system -std=c++17
-EXC = build
-OBJ = obj
+CXX      = g++
+CXXFLAGS = -g -Wall -Wextra -pedantic -std=c++17
+LIBS     = -lboost_system -lboost_filesystem -lcurl
+EXC      = build
+OBJ      = obj
 ############################################################
-
 OUTPUT_NAME = execute_crawl
 
-all: $(OBJ)/crawl.o
-	$(CXX) $(CXXFLAGS) -o $(EXC)/$(OUTPUT_NAME) $(OBJ)/crawl.o -lboost_filesystem -lcurl
+all: $(EXC)/$(OUTPUT_NAME)
+
+$(EXC)/$(OUTPUT_NAME): $(OBJ)/crawl.o $(OBJ)/mail.o
+	$(CXX) $(CXXFLAGS) -o $@ $^ $(LIBS)
 
 $(OBJ)/crawl.o: src/crawl.cpp
-	$(CXX) $(CXXFLAGS) -o $@ -c src/crawl.cpp -lboost_filesystem -lcurl
+	$(CXX) $(CXXFLAGS) -c -o $@ src/crawl.cpp
+
+$(OBJ)/mail.o: src/mail.cpp
+	$(CXX) $(CXXFLAGS) -c -o $@ src/mail.cpp
 
 clean:
-	$(RM) $(OBJ)/crawl.o
+	$(RM) $(OBJ)/crawl.o $(OBJ)/mail.o
 
 run: $(EXC)/$(OUTPUT_NAME)
 	./$(EXC)/$(OUTPUT_NAME)
