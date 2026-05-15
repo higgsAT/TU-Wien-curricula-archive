@@ -53,6 +53,25 @@ void insert_logfile(std::string path_to_logfile, std::string msg_log1, std::stri
 	}
 }
 
+void delete_file(const std::string& path_to_file, std::string log_files_path, char* temp_insert_date_logfile) {
+	/*
+	* Attempts to delete the given file via the path path_to_file.
+	* Logs success or failure to the logfile.
+	*/
+	if (!boost::filesystem::exists(path_to_file)) {
+		return;
+	}
+
+	int remove_flag = std::remove(path_to_file.c_str());
+	if (remove_flag != 0) {
+		insert_logfile(log_files_path + temp_insert_date_logfile,
+		"Unable to delete file:", path_to_file);
+	} else {
+		insert_logfile(log_files_path + temp_insert_date_logfile,
+		"delete file:", path_to_file);
+	}
+}
+
 // datastream (fetched source files) used by fetch_source_single_page
 size_t write_fetched_data(void* ptr, size_t size, size_t nmemb, void* data)
 {
@@ -462,6 +481,22 @@ int main()
 			std::string old_file_path = temp_files_path + filename_extraction(extract_PDF_urls[i], "/");
 			std::string new_file_path = check_folder_exist + "/" + filename_extraction(extract_PDF_urls[i], "/");
 
+			// abort if filesize is zero (failed download) or if the file is not accessible
+			if (!boost::filesystem::exists(old_file_path)) continue;
+			std::uintmax_t file_size = 0;
+			try {
+			    file_size = boost::filesystem::file_size(old_file_path);
+			} catch (const boost::filesystem::filesystem_error& e) {
+				insert_logfile(log_files_path + temp_insert_date_logfile, "Unable to read file:", old_file_path);
+				continue;
+			}
+			if (file_size == 0) {
+				insert_logfile(log_files_path + temp_insert_date_logfile, "Empty filesize:", old_file_path);
+				delete_file(old_file_path, log_files_path, temp_insert_date_logfile);
+				continue;
+			}
+			std::cout << "filesize: " << file_size << std::endl;
+
 			if (!boost::filesystem::exists(check_folder_exist))	// folder does not exist (create folder, move the file)
 			{
 				// create the folder and just copy the file into the folder (since it is the first file in this folder)
@@ -504,21 +539,8 @@ int main()
 						if (crc32_checksum_file_path == crc32_checksum_temp_file)	// file already in the folder -> delete file in temp folder
 						{
 							file_already_in_folder = true;
-
-							// remove this file in the temp folder
-							int remove_flag = std::remove(old_file_path.c_str());
+							delete_file(old_file_path, log_files_path, temp_insert_date_logfile);
 							total_amt_files_already_in++;
-
-							// check for success of deletion
-							if (remove_flag != 0)
-							{
-								std::cout << "deletion of file: " << old_file_path << " failed" << std::endl;
-							}
-							else	// deletion was successful -> create a log entry
-							{
-								insert_logfile(log_files_path + temp_insert_date_logfile, "delete file:", old_file_path.c_str());
-							}
-
 							break;
 						}
 					}
