@@ -12,6 +12,7 @@
 #include <ctime>
 #include <cstdio>
 #include <iomanip>
+#include <thread>
 
 #include "../header/mail.hpp"
 
@@ -31,8 +32,8 @@ void insert_logfile(std::string path_to_logfile, std::string msg_log1, std::stri
 	std::cout << temp_insert_date_logfile;
 
 	unsigned int padLen = 40;	// whitespace padding of the string
-	if (msg_log1.size() > padLen)	// prevent an error when the logmsg1 is longer than the set paddin length
-	{
+	// prevent an error when the logmsg1 is longer than the set paddin length
+	if (msg_log1.size() > padLen) {
 		padLen = msg_log1.size();
 	}
 
@@ -41,13 +42,11 @@ void insert_logfile(std::string path_to_logfile, std::string msg_log1, std::stri
 	logfile_ofstream << msg_log1;
 	std::cout << msg_log1;
 
-	if (msg_log2 != "")
-	{
+	if (msg_log2 != "") {
 		logfile_ofstream << msg_log2 << std::endl;
 		std::cout << msg_log2 << std::endl;
 	}
-	else
-	{
+	else {
 		logfile_ofstream << std::endl;
 		std::cout << std::endl;
 	}
@@ -83,7 +82,7 @@ size_t write_fetched_data(void* ptr, size_t size, size_t nmemb, void* data)
 // fetch the source code of a single page
 std::string fetch_source_single_page(std::string url_full)
 {
-	std::string useragent = "https://github.com/clauskovacs/TU-Wien-curricula-archive";		// user agent string
+	std::string useragent = "https://github.com/higgsAT/TU-Wien-curricula-archive";		// user agent string
 
 	CURL* ch_ = curl_easy_init();				// create a CURL handle
 	char error_buffer[CURL_ERROR_SIZE];
@@ -125,7 +124,7 @@ void fetch_PDF_from_URL(std::string fetch_pdf_url, std::string filename, std::st
 {
 	CURL* curl;
 	FILE* fp;
-	std::string useragent = "https://github.com/clauskovacs/TU-Wien-curricula-archive";		// user agent string
+	std::string useragent = "https://github.com/higgsAT/TU-Wien-curricula-archive";		// user agent string
 
 	// define locations where to save the file temporarily
 	std::string outfilename = temp_files_path + filename;
@@ -133,8 +132,7 @@ void fetch_PDF_from_URL(std::string fetch_pdf_url, std::string filename, std::st
 
 	curl = curl_easy_init();
 
-	if (curl)
-	{
+	if (curl) {
 		fp = fopen(cfilename, "wb");
 		curl_easy_setopt(curl, CURLOPT_URL, fetch_pdf_url.c_str());
 		curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_file_data);
@@ -155,8 +153,7 @@ std::string filename_extraction(std::string process_string, std::string delimite
 	size_t pos = 0;
 	std::string token;
 
-	while ((pos = process_string.find(delimiter)) != std::string::npos)
-	{
+	while ((pos = process_string.find(delimiter)) != std::string::npos) {
 		token = process_string.substr(0, pos);
 		process_string.erase(0, pos + delimiter.length());	// remove the parts of the string left of the delimiter
 	}
@@ -170,14 +167,13 @@ std::string filename_extraction(std::string process_string, std::string delimite
 void extract_PDF_URL_and_descriptions(std::string result, std::vector<std::string>& fetched_URLs, std::vector<std::string>& fetched_URLs_descriptions, std::string logpath)
 {
 	// iterate the std::string and find the desired elements
-	for (unsigned int i = 0; i < result.length()-8; i++)
-	{
+	for (unsigned int i = 0; i < result.length()-8; i++) {
 		// rolling comparison to find open '<a href="' tags
 		int ahref_compare = result.compare(i, 9, "<a href=\"");
 
 		// extract the target URL to the PDF and the description according to the page source code
-		if (ahref_compare == 0)	// found an opening '<a href="' tag
-		{
+		// found an opening '<a href="' tag
+		if (ahref_compare == 0) {
 			bool close_URL = false;
 			i += 9;							// increment variable i by 9 to set the position at the end of the opening bracket
 			int start_extract_pos_URL = i;	// cache the start position
@@ -187,34 +183,29 @@ void extract_PDF_URL_and_descriptions(std::string result, std::vector<std::strin
 
 			bool already_in_list = false;	// prevent the same PDF being pushed multiple times into the std::vec (which would cause problems with further file processing)
 
-			while (close_URL == false)
-			{
+			while (close_URL == false) {
 				i++;
 
-				if (result[i] == '\"')	// end of URL reached
-				{
+				// end of URL reached
+				if (result[i] == '\"') {
 					close_URL = true;
 					extract_URL.append(result.begin() + start_extract_pos_URL, result.begin() + i);
 
 					// check whether this entry is already in the std::vector (multiple links leading to the same PDF)
-					for (unsigned int j = 0; j < fetched_URLs.size(); j++)
-					{
-
-						if (filename_extraction(fetched_URLs[j], "/") == filename_extraction(extract_URL, "/"))
-						{
+					for (unsigned int j = 0; j < fetched_URLs.size(); j++) {
+						if (filename_extraction(fetched_URLs[j], "/") == filename_extraction(extract_URL, "/")) {
 							already_in_list = true;
 							break;
 						}
 					}
 
 					// only add the information _if_ this element is not already in the list (else the PDF would be added multiple times
-					if (already_in_list == false)
-					{
+					if (already_in_list == false) {
 						fetched_URLs.push_back(extract_URL);
 					}
 				}
-				else if (i == result.length())	// error .. end of string while tag is open!
-				{
+				// error .. end of string while tag is open!
+				else if (i == result.length()) {
 					// TODO: just skip this element
 					std::cout << "error parsing the source code (wrong syntax at closing tag for PDF-extration)" << std::endl;
 					std::cout << "i = " << i << std::endl;
@@ -223,8 +214,9 @@ void extract_PDF_URL_and_descriptions(std::string result, std::vector<std::strin
 			}
 
 			// increase i until '>' is reached (which marks the end of the URL and beginning of the description)
-			while (result[i] != '>')
+			while (result[i] != '>') {
 				i++;
+			}
 
 			// get the description of the URL (as viewed by the browser)
 			bool close_descr = false;
@@ -233,25 +225,23 @@ void extract_PDF_URL_and_descriptions(std::string result, std::vector<std::strin
 
 			std::string extract_desc;	// description of the file
 
-			while (close_descr == false)
-			{
+			while (close_descr == false) {
 				i++;
 
-				if (result[i] == '<')	// end of desc reached
-				{
+				// end of desc reached
+				if (result[i] == '<') {
 					close_descr = true;
 					extract_desc.append(result.begin() + start_extract_pos_desc, result.begin() + i);
 
 					// only add the information _if_ this element is not already in the list (else the PDF would be added multiple times
-					if (already_in_list == false)
-					{
+					if (already_in_list == false) {
 						// clean-up the url (remove undesired strings)
 						std::string delete_string_search = "&nbsp;";	// search and remove this string from the folder name
 						std::string::size_type del_pos_search = extract_desc.find(delete_string_search);	// search the position of this string
 
 						// string to delete has been found -> remove this part from the url (which is used as a folder name later on)
-						if (del_pos_search != std::string::npos)	// if a position has been found it will be removed
-						{
+						// if a position has been found it will be removed
+						if (del_pos_search != std::string::npos) {
 							insert_logfile(logpath, "cleanup extract_desc(" + delete_string_search + "):", extract_desc);
 							extract_desc.erase(del_pos_search, delete_string_search.length());
 						}
@@ -260,8 +250,8 @@ void extract_PDF_URL_and_descriptions(std::string result, std::vector<std::strin
 						fetched_URLs_descriptions.push_back(extract_desc);
 					}
 				}
-				else if (i == result.length())	// error .. end of string while tag is open!
-				{
+				// error .. end of string while tag is open!
+				else if (i == result.length()) {
 					// TODO: just skip this element
 					std::cout << "error parsing the source code (wrong syntax of a closing tag for description-extration)" << std::endl;
 					std::cout << "i = " << i << std::endl;
@@ -282,32 +272,27 @@ uint32_t crc32(std::string file_read_open)
 
 	std::filebuf fb;
 
-	if (fb.open (file_read_open, std::ios::in))
-	{
+	if (fb.open (file_read_open, std::ios::in)) {
 		std::istream is(&fb);
 
 		// calculate the crc32 checksum
-		do
-		{
+		do {
 			is.read(buf, sizeof buf);
 			result.process_bytes(buf, is.gcount());
 		}
 		while (is);
 
-		if (is.eof())
-		{
+		if (is.eof()) {
 			return result.checksum();
 		}
-		else
-		{
+		else {
 			throw std::runtime_error("File read failed");
 			return 0;
 		}
 
 		fb.close();
 	}
-	else
-	{
+	else {
 		std::cout << "File read failed" << std::endl;
 		return 0;
 	}
@@ -318,9 +303,12 @@ uint32_t crc32(std::string file_read_open)
 int main()
 {
 	// file counters for the processing of the files (used in the logfiles)
-	int total_amt_files_processed	= 0;	// total amount of files processed
-	int total_amt_files_added		= 0;	// amount of new files added to the archive
-	int total_amt_files_already_in	= 0;	// total number of files which are already in the archive
+	int total_amt_files_processed	   = 0;  // total amount of files processed
+	int total_amt_files_added		   = 0;  // amount of new files added to the archive
+	int total_amt_files_already_in	= 0;  // total number of files which are already in the archive
+	int total_amt_files_non_pdf		= 0;  // total number of files which are not of type PDF
+	int total_amt_files_zero_size		= 0;  // total number of files with zero size
+	int total_amt_files_readerror		= 0;  // total number of files with could not be processed
 
 	// the site one wants to crawl
 	std::string TLD						= "https://www.tuwien.at";													// top-level-domain
@@ -332,8 +320,7 @@ int main()
 	std::string curricula_files_path	= absolute_path + "curricula/";									// location where the downloaded curricula are stored
 	std::string log_files_path			= absolute_path + "logs/";										// location where the logs (info about the crawl) are stored
 
-	if (!std::filesystem::is_directory(temp_files_path))
-	{
+	if (!std::filesystem::is_directory(temp_files_path)) {
 		std::cout << "path " << temp_files_path << " does not exist -> check set file paths" << std::endl;
 		exit(1);
 	}
@@ -346,7 +333,7 @@ int main()
 
 	// fetch the date of today to insert it into the filename (and the logfile name)
 	std::time_t now = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
-	char temp_insert_date[100]			= {0};
+	char temp_insert_date[100]				= {0};
 	char temp_insert_date_logfile[100]	= {0};
 	std::strftime(temp_insert_date, sizeof(temp_insert_date), " (%Y-%m-%d %X)", std::localtime(&now));
 	std::strftime(temp_insert_date_logfile, sizeof(temp_insert_date_logfile), "%Y-%m-%d %X", std::localtime(&now));
@@ -357,8 +344,7 @@ int main()
  	insert_logfile(log_files_path + temp_insert_date_logfile, "temp download folder: ", temp_files_path);
  	insert_logfile(log_files_path + temp_insert_date_logfile, "curricula folder: ", curricula_files_path);
 
-	for (unsigned int i = 0; i < search_str.size(); i++)
-	{
+	for (unsigned int i = 0; i < search_str.size(); i++) {
 		insert_logfile(log_files_path + temp_insert_date_logfile, "searchstr: " + std::to_string(i), search_str[i]);
 	}
 
@@ -390,22 +376,18 @@ int main()
 	extract_PDF_URL_and_descriptions(result, extract_PDF_urls, extract_url_descr, log_files_path + temp_insert_date_logfile);
 
 	// check whether both std::vectors have the same size
-	if (extract_PDF_urls.size() != extract_url_descr.size())
-	{
+	if (extract_PDF_urls.size() != extract_url_descr.size()) {
 		std::cout << "error: amount of obtained data does not match (" << extract_PDF_urls.size() << " | " << extract_url_descr.size() << ")" << std::endl;
 		exit(1);
 	}
 
 	// extract additional information (BSc-, MSc-, expiring curriculum) -> iterate through each (found) element
-	for (unsigned int i = 0; i < extract_PDF_urls.size(); i++)
-	{
+	for (unsigned int i = 0; i < extract_PDF_urls.size(); i++) {
 		bool found_element = false;
 
 		// determine which curricula is which (of type)
-		for (unsigned int j = 0; j < search_str.size(); j++)
-		{
-			if (extract_PDF_urls[i].find(search_str[j]) != std::string::npos)
-			{
+		for (unsigned int j = 0; j < search_str.size(); j++) {
+			if (extract_PDF_urls[i].find(search_str[j]) != std::string::npos) {
 				extract_url_info.push_back(j);
 				found_element = true;
 			 	insert_logfile(log_files_path + temp_insert_date_logfile, "extracted file[" + std::to_string(j) + "]:", extract_PDF_urls[i] + "|"+extract_url_descr[i]);
@@ -418,8 +400,7 @@ int main()
 		}
 
 		// no element of interest
-		if (found_element == false)
-		{
+		if (found_element == false) {
 			extract_url_info.push_back(-1);
 		}
 	}
@@ -432,11 +413,9 @@ int main()
 
 	insert_logfile(log_files_path + temp_insert_date_logfile, "downloading PDFs");
 
-	for (unsigned int i = 0; i < extract_PDF_urls.size(); i++)
-	{
+	for (unsigned int i = 0; i < extract_PDF_urls.size(); i++) {
 		// only parse desired links (ones of type PDF which were included in the search_str vector)
-		if (extract_url_info[i] > -1)
-		{
+		if (extract_url_info[i] > -1) {
 			// cout the PDF URLs
 		 	insert_logfile(log_files_path + temp_insert_date_logfile, "downloading file[" + std::to_string(extract_url_info[i]) + "]:", extract_PDF_urls[i]);
 
@@ -446,6 +425,8 @@ int main()
 
 			// download a single PDF given by an URL
 			fetch_PDF_from_URL(TLD + extract_PDF_urls[i], extracted_file_name, temp_files_path);
+
+			std::this_thread::sleep_for(std::chrono::seconds(5));
 
 			// TODO: check whether the download was successful, i.e., check if the downloaded file exists
 		}
@@ -460,16 +441,14 @@ int main()
 	// go through each (temporarily) downloaded file: see if the file is already present in the downloaded folder or not
 
 	// loop through all found files
-	for (unsigned int i = 0; i < extract_PDF_urls.size(); i++)
-	{
-		if (extract_url_info[i] > -1)
-		{
+	for (unsigned int i = 0; i < extract_PDF_urls.size(); i++) {
+		if (extract_url_info[i] > -1) {
 			// URL description clean-up ('amp;')
 			std::string erase_search = "amp;";
 			std::string::size_type search_pos = extract_url_descr[i].find(erase_search);	// search the position of this string
 
-			if (search_pos != std::string::npos)	// if a position has been found it will be removed
-			{
+			// if a position has been found it will be removed
+			if (search_pos != std::string::npos) {
 				insert_logfile(log_files_path + temp_insert_date_logfile, "cleanup extract_url_descr(" + erase_search + "):", extract_url_descr[i]);
 				extract_url_descr[i].erase(search_pos, erase_search.length());
 			}
@@ -488,17 +467,31 @@ int main()
 			    file_size = boost::filesystem::file_size(old_file_path);
 			} catch (const boost::filesystem::filesystem_error& e) {
 				insert_logfile(log_files_path + temp_insert_date_logfile, "Unable to read file:", old_file_path);
+				total_amt_files_readerror++;
 				continue;
 			}
 			if (file_size == 0) {
 				insert_logfile(log_files_path + temp_insert_date_logfile, "Empty filesize:", old_file_path);
 				delete_file(old_file_path, log_files_path, temp_insert_date_logfile);
+				total_amt_files_zero_size++;
 				continue;
 			}
 			std::cout << "filesize: " << file_size << std::endl;
 
-			if (!boost::filesystem::exists(check_folder_exist))	// folder does not exist (create folder, move the file)
-			{
+			// check magic bytes (%PDF)
+			std::ifstream pdf_check(old_file_path, std::ios::binary);
+			char magic[4] = {0};
+			pdf_check.read(magic, 4);
+			pdf_check.close();
+			if (std::strncmp(magic, "%PDF", 4) != 0) {
+				insert_logfile(log_files_path + temp_insert_date_logfile, "not a valid PDF, skipping:", old_file_path);
+				delete_file(old_file_path, log_files_path, temp_insert_date_logfile);
+				total_amt_files_non_pdf++;
+				continue;
+			}
+
+			// folder does not exist (create folder, move the file)
+			if (!boost::filesystem::exists(check_folder_exist)) {
 				// create the folder and just copy the file into the folder (since it is the first file in this folder)
 				std::filesystem::create_directories(check_folder_exist);
 				insert_logfile(log_files_path + temp_insert_date_logfile, "create dir:", check_folder_exist);
@@ -513,8 +506,8 @@ int main()
 				// increase the amount of files added to the counter (logfile)
 				total_amt_files_added++;
 			}
-			else	// folder already exists -> check via crc32 checksum whether the file is new or not
-			{
+			// folder already exists -> check via crc32 checksum whether the file is new or not
+			else {
 				// determine the crc32 checksum of the file which is being sorted into the folder
 				uint32_t crc32_checksum_temp_file = crc32(old_file_path);
 				insert_logfile(log_files_path + temp_insert_date_logfile, "crc32 of file:", old_file_path + "|" + std::to_string(crc32_checksum_temp_file));
@@ -524,35 +517,33 @@ int main()
 				bool file_already_in_folder = false;
 
 				// loop through all files found at this path
-				for (const auto & entry : std::filesystem::directory_iterator(path))
-				{
+				for (const auto & entry : std::filesystem::directory_iterator(path)) {
 					// fetch the name of the files in this folder and build the file path
 					std::string check_file_path = check_folder_exist + "/" + entry.path().filename().string();
 
-					if (!std::filesystem::is_directory(check_file_path))	// don't process subdirectories
-					{
+					// don't process subdirectories
+					if (!std::filesystem::is_directory(check_file_path)) {
 						std::cout << check_file_path << "is a file" << std::endl;
 
 						// create the crc32 checksum for this file
 						uint32_t crc32_checksum_file_path = crc32(check_file_path);
 
-						if (crc32_checksum_file_path == crc32_checksum_temp_file)	// file already in the folder -> delete file in temp folder
-						{
+						// file already in the folder -> delete file in temp folder
+						if (crc32_checksum_file_path == crc32_checksum_temp_file) {
 							file_already_in_folder = true;
 							delete_file(old_file_path, log_files_path, temp_insert_date_logfile);
 							total_amt_files_already_in++;
 							break;
 						}
 					}
-					else	// TODO: parse the subdirectories (add the same routine "for (const auto & entry : std::filesystem::directory_iterator(path))" to subdirectories. Which means check check the files in the subfolders too.
-					{
+					// TODO: parse the subdirectories (add the same routine "for (const auto & entry : std::filesystem::directory_iterator(path))" to subdirectories. Which means check check the files in the subfolders too.
+					else {
 						std::cout << check_file_path << "is a (sub)directory" << std::endl;
 					}
 				}
 
 				// file not found in the folder (by comparing the crc32 checksum) -> move the file
-				if (file_already_in_folder == false)
-				{
+				if (file_already_in_folder == false) {
 					// add the crawled date to the file name
 					new_file_path.insert(new_file_path.size()-4, temp_insert_date);
 
@@ -575,16 +566,13 @@ int main()
 	int count_unsorted_files = 0;	// amount of files remaining in the temp download folder after running the program
 
 	// loop through all files found in the temp download folder
-	for (const auto & entry : std::filesystem::directory_iterator(temp_files_path))
-	{
+	for (const auto & entry : std::filesystem::directory_iterator(temp_files_path)) {
 		std::string check_file_path_a = entry.path().filename().string();
-
 		count_unsorted_files++;
 	}
 
 	// more than one file remained unsorted in the temp download folder
-	if (count_unsorted_files > 0)
-	{
+	if (count_unsorted_files > 0) {
 		std::cout << "a total of " << count_unsorted_files << " files were not sorted and remain in the directory " << temp_files_path << std::endl;
 	}
 
@@ -592,8 +580,23 @@ int main()
 
 	// write info about the file processing into the logfile (amount of files processed, added, removed since they are already in the archive)
 	insert_logfile(log_files_path + temp_insert_date_logfile, "amount of files processed:", std::to_string(total_amt_files_processed));
+	insert_logfile(log_files_path + temp_insert_date_logfile, "amount of files faulty (non) PDFs:", std::to_string(total_amt_files_non_pdf));
+	insert_logfile(log_files_path + temp_insert_date_logfile, "amount of files with zero size:", std::to_string(total_amt_files_zero_size));
+	insert_logfile(log_files_path + temp_insert_date_logfile, "amount of files unreadable (readerror):", std::to_string(total_amt_files_readerror));
 	insert_logfile(log_files_path + temp_insert_date_logfile, "amount of new files added:", std::to_string(total_amt_files_added));
 	insert_logfile(log_files_path + temp_insert_date_logfile, "amount of files already in the archive (CRC32 duplicates):", std::to_string(total_amt_files_already_in));
+
+	bool counts_consistent = (total_amt_files_processed ==
+		total_amt_files_added +
+		total_amt_files_already_in +
+		total_amt_files_non_pdf +
+		total_amt_files_zero_size +
+		total_amt_files_readerror);
+
+	insert_logfile(log_files_path + temp_insert_date_logfile,
+		"file counts consistent:",
+		counts_consistent ? "yes" : "no (check counts above)");
+
  	insert_logfile(log_files_path + temp_insert_date_logfile, "end");
 
 	// At least one new curricula extracted -> Send info mail to user
